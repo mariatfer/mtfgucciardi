@@ -1,0 +1,31 @@
+:root {
+  --c-black: #000000;
+  --c-semi-black: #0d0d0d;
+  --c-aquamarine: #288888;
+  --c-ligth-aquamarine: #509999;
+  --c-primary: #FECD6C;
+  --c-red: red;
+  --c-white: #ffffff;
+  --c-graphite: #1a1a1a;
+  --c-light-graphite: #f0f0f0;
+
+  --f-font: 'Fira Sans';
+
+  --s-border-radius-button: 0.25rem;
+  --s-border-radius-card: 0.625rem;
+  --s-font-h1: 3rem;
+  --s-font-h2: 3rem;
+  --s-font-h3: 2rem;
+  --s-font-h4: 1.5rem;
+  --s-font-p: 1rem;
+  --s-font-small: 0.875rem;
+  --s-font-cta: 1rem;
+  --s-font-h1-mobile: 2rem;
+  --s-font-h2-mobile: 2rem;
+  --s-font-h3-mobile: 1.5rem;
+  --s-font-h4-mobile: 1.3125rem;
+  --s-margin-blocks: 8rem;
+  --s-padding-lateral: 8rem;
+  --s-padding-lateral-mobile: 1rem;
+  --t-transition-button: 0.3s;
+}
