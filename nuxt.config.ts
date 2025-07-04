@@ -15,6 +15,7 @@ export default defineNuxtConfig({
   ],
   css: [
     "@/assets/styles/fonts.css",
+    "@/assets/styles/vueTransitions.css",
     "@/assets/styles/variables.css",
     "@/assets/styles/reset.scss",
   ],
