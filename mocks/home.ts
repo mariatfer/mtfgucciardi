@@ -1,5 +1,5 @@
 import type { Home } from "@/interfaces/home";
-import characterImg from "@/assets/img/character.png";
+import characterImg from "@/assets/img/character.svg";
 
 export const home: Home = {
   title: "Hi. I'm María",
