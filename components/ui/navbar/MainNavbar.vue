@@ -48,9 +48,12 @@ const { showModal, useOpenModal, useCloseModal } = useModal();
 <style lang="scss" scoped>
 .navbar {
   @include flex(row, center, space-between);
-  padding: 1.5rem 3rem;
+  padding: 1.5rem var(--s-padding-lateral);
   background-color: var(--c-aquamarine);
   max-height: 5rem;
+  @include responsive {
+    padding: var(--s-padding-lateral-mobile);
+  }
   &__social {
     @include flex(row, center, space-between, $gap: 1.5rem);
     @include responsive {
