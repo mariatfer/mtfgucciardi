@@ -1,30 +1,50 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { profileCard } from "@/mocks/about";
+import skillsImg from "@/assets/img/skills.svg";
+const { isResponsiveResolution } = useWindowsResize();
+
+const textAlign = computed(() =>
+  isResponsiveResolution.value ? "center" : "left"
+);
+</script>
 
 <template>
-  <UiTheTitle
-    text-align="left"
-    color="var(--c-primary)"
-    :shadow="false"
-    :uppercase="true"
-    :bolder="true"
-    >About Me</UiTheTitle
-  >
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis deleniti,
-    nihil dolor obcaecati sequi delectus ex. Natus molestias, nulla quo facilis
-    dolorem repellat consequuntur neque rerum ea suscipit libero dolore.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
-    temporibus suscipit quibusdam quasi totam eius perspiciatis minima,
-    voluptatum, necessitatibus repellendus officia ipsa nobis, harum minus
-    fugiat. Sed enim numquam provident? Lorem ipsum dolor sit amet consectetur
-    adipisicing elit. Minima neque esse est, consequatur adipisci dolorem at
-    sequi, corrupti maiores deserunt quisquam. Magni, voluptatem. Tempore,
-    consequatur perspiciatis? Illo quasi maiores eum? Lorem ipsum dolor sit amet
-    consectetur adipisicing elit. Blanditiis eaque officia veritatis tempore,
-    odio pariatur sed sunt, beatae voluptate esse, aliquid similique ipsam.
-  </p>
+  <section class="profile-card">
+    <UiTheTitle
+      :text-align="textAlign"
+      color="var(--c-primary)"
+      :shadow="false"
+      :uppercase="true"
+      :bolder="true"
+      >{{ profileCard.title }}</UiTheTitle
+    >
+    <article class="profile-card__content">
+      <p v-for="description in profileCard.description" :key="description.id">
+        {{ description.text }}
+      </p>
+    </article>
+    <UiMainButton
+      :link="skillsImg"
+      width="100%"
+      download="Fernandez_Maria_Teresa_CV"
+      ><icon :name="profileCard.button.icon" />{{
+        profileCard.button.text
+      }}</UiMainButton
+    >
+  </section>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.profile-card {
+  @include flex(column, initial, space-between, $gap: 1.5rem);
+  margin: var(--s-margin-blocks) 0;
+  @include responsive {
+    margin: var(--s-margin-blocks-mobile) 0;
+    text-align: center;
+  }
+
+  &__content {
+    @include flex(column, flex-start, space-between, $gap: 1rem);
+  }
+}
+</style>
