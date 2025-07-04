@@ -1,4 +1,15 @@
 export const ICONS = {
   github: "mdi:github",
   linkedin: "mdi:linkedin",
+  html: "mdi:language-html5",
+  css: "mdi:language-css3",
+  javascript: "mdi:language-javascript",
+  typescript: "mdi:language-typescript",
+  vue: "mdi:vuejs",
+  nuxt: "mdi:nuxt",
+  sass: "mdi:sass",
+  php: "mdi:language-php",
+  git: "mdi:git",
+  mysql: "mdi:database",
+  download: "mdi:download",
 };
