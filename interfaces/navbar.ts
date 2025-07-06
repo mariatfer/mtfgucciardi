@@ -1,5 +1,5 @@
 export interface NavbarLink {
-  id: string;
+  id: number;
   text: string;
   link: string;
 }
