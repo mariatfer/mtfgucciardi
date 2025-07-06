@@ -1,3 +1,5 @@
+import type { Image } from "@/interfaces/common";
+
 export interface ProfileCard {
   title: string;
   description: Array<{ id: number; text: string }>;
@@ -9,7 +11,7 @@ export interface ProfileCard {
 
 export interface SkillsSection {
   title: string;
-  image: string;
+  image: Image;
   skills: Array<{ id: number; text: string; icon: string }>;
 }
 
