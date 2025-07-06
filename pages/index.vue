@@ -11,7 +11,7 @@ import { home } from "@/mocks/home";
       </p>
     </section>
     <section class="home__character">
-      <img :src="home.image" alt="" class="home__image" />
+      <img :src="home.image.url" :alt="home.image.alt" class="home__image" />
     </section>
   </div>
 </template>

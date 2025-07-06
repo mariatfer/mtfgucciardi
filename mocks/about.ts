@@ -23,7 +23,10 @@ export const profileCard: ProfileCard = {
 
 export const skillsSection: SkillsSection = {
   title: "Skills",
-  image: skillsImg as string,
+  image: {
+    url: skillsImg as string,
+    alt: "Skills Illustration",
+  },
   skills: [
     { id: 1, text: "JavaScript", icon: ICONS.javascript },
     { id: 2, text: "TypeScript", icon: ICONS.typescript },

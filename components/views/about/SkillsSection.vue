@@ -12,7 +12,11 @@ import { skillsSection } from "@/mocks/about";
       >{{ skillsSection.title }}</UiTheTitle
     >
     <div class="skills__container">
-      <img :src="skillsSection.image" alt="" class="skills__image" />
+      <img
+        :src="skillsSection.image.url"
+        :alt="skillsSection.image.alt"
+        class="skills__image"
+      />
       <article class="skills-grid">
         <UiScrollReveal v-for="skill in skillsSection.skills" :key="skill.id">
           <section class="skills-grid__card">
