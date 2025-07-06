@@ -4,50 +4,53 @@ import { skillsSection } from "@/mocks/about";
 
 <template>
   <section class="skills">
-    <UiTheTitle color="var(--c-primary)" :shadow="false">{{
-      skillsSection.title
-    }}</UiTheTitle>
-    <img :src="skillsSection.image" alt="" class="skills__image" />
-    <article class="skills-grid">
-      <section
-        v-for="skill in skillsSection.skills"
-        :key="skill.id"
-        class="skills-grid__card"
-      >
-        <icon :name="skill.icon" class="skills-grid__icon" />
-        <h4 class="skills-grid__title">{{ skill.text }}</h4>
-      </section>
-    </article>
+    <UiTheTitle
+      color="var(--c-primary)"
+      :shadow="false"
+      :uppercase="true"
+      :bolder="true"
+      >{{ skillsSection.title }}</UiTheTitle
+    >
+    <div class="skills__container">
+      <img :src="skillsSection.image" alt="" class="skills__image" />
+      <article class="skills-grid">
+        <UiScrollReveal v-for="skill in skillsSection.skills" :key="skill.id">
+          <section class="skills-grid__card">
+            <icon :name="skill.icon" class="skills-grid__icon" />
+            <h4 class="skills-grid__title">{{ skill.text }}</h4>
+          </section>
+        </UiScrollReveal>
+      </article>
+    </div>
   </section>
 </template>
 
 <style lang="scss" scoped>
 .skills {
-  margin: var(--s-margin-blocks) 0;
-  @include flex(column, center, space-between);
+  @include flex(row, center, space-around, $gap: 1rem);
   width: 100%;
-  max-width: 35%;
 
-  @include responsive {
-    margin: var(--s-margin-blocks-mobile) 0;
-    max-width: unset;
+  @include responsive() {
+    @include flex(column, center, space-between, $gap: 1rem);
   }
 
+  &__container {
+    @include flex(column, center, space-between, $gap: 1rem);
+    max-width: 100%;
+  }
   &__image {
     width: 100%;
     max-width: 19.4375rem;
     height: auto;
+    filter: drop-shadow(0 15px 0.5rem #00000062);
   }
 }
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
   max-width: 100%;
-  
-  @include responsive {
-    grid-template-columns: repeat(4, 1fr);
-  }
+
   @include responsive(51.875em) {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -56,9 +59,9 @@ import { skillsSection } from "@/mocks/about";
     @include flex(column, flex-start);
     gap: 0.5rem;
     padding: 1rem;
-    background-color: var(--c-aquamarine);
+    background-color: var(--c-ligth-aquamarine);
     border-radius: 0.5rem;
-    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 7px 0.5rem #00000062;
   }
 
   &__title {
