@@ -6,6 +6,9 @@ const { isResponsiveResolution } = useWindowsResize();
 const textAlign = computed(() =>
   isResponsiveResolution.value ? "center" : "left"
 );
+const width = computed(() =>
+  isResponsiveResolution.value ? "80%" : "fit-content"
+);
 </script>
 
 <template>
@@ -25,21 +28,18 @@ const textAlign = computed(() =>
     </article>
     <UiMainButton
       :link="skillsImg"
-      width="100%"
+      :width="width"
       download="Fernandez_Maria_Teresa_CV"
-      ><icon :name="profileCard.button.icon" />{{
-        profileCard.button.text
-      }}</UiMainButton
-    >
+      >{{ profileCard.button.text }}<icon :name="profileCard.button.icon"
+    /></UiMainButton>
   </section>
 </template>
 
 <style lang="scss" scoped>
 .profile-card {
-  @include flex(column, initial, space-between, $gap: 1.5rem);
-  margin: var(--s-margin-blocks) 0;
+  @include flex(column, flex-start, space-between, $gap: 1.5rem);
   @include responsive {
-    margin: var(--s-margin-blocks-mobile) 0;
+    @include flex(column, center, space-between, $gap: 1rem);
     text-align: center;
   }
 

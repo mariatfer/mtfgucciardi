@@ -27,9 +27,9 @@
   --s-font-h2-mobile: 2rem;
   --s-font-h3-mobile: 1.5rem;
   --s-font-h4-mobile: 1.3125rem;
-  --s-margin-blocks: 6rem;
-  --s-margin-blocks-mobile: 3rem;
-  --s-padding-lateral: 6rem;
-  --s-padding-lateral-mobile: 1.5rem;
+  --s-margin-blocks: 7rem;
+  --s-margin-blocks-mobile: 3.5rem;
+  --s-padding-lateral: 7rem;
+  --s-padding-lateral-mobile: 2rem;
   --t-transition-button: 0.3s;
 }
