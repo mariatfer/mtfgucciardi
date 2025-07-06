@@ -55,6 +55,7 @@ import { home } from "@/mocks/home";
   &__image {
     filter: drop-shadow(0 0 0.5rem var(--c-black));
     max-height: 40rem;
+    overflow: hidden;
   }
 }
 </style>
