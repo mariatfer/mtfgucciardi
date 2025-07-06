@@ -27,7 +27,6 @@ onMounted(() => {
         trigger: el.value,
         start: "top 85%",
         toggleActions: "play none none none",
-        markers: true,
       },
     }
   );
