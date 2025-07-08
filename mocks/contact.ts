@@ -41,4 +41,5 @@ export const contactForm: ContactForm = {
       twoColumns: false,
     },
   ],
+  button: "Send"
 };
