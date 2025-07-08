@@ -2,7 +2,9 @@
 export default defineNuxtConfig({
   compatibilityDate: "2025-05-15",
   devtools: { enabled: true },
-
+  runtimeConfig: {
+    RESEND_API_KEY: process.env.RESEND_API_KEY || "",
+  },
   modules: [
     "@nuxt/content",
     "@nuxt/eslint",
