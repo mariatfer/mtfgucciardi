@@ -71,22 +71,25 @@ const sendMessage = async () => {
       class="contact-form__grid-item"
       >{{ contactForm.title }}</UiTheTitle
     >
-
-    <component
-      :is="field.component"
+    <UiScrollReveal
       v-for="field in contactForm.fields"
       :key="field.id"
-      v-model="formData[field.vModel]"
       :class="['contact-form__grid-item', field.twoColumns || '']"
-      :input-id="field.id"
-      :label="field.label"
-      :placeholder="field.placeholder"
-      :aria-label="field.ariaLabel"
-      :error="errors[field.vModel]"
-      @blur="validateFieldOnBlur(field.vModel, formData[field.vModel])"
-    />
-
-    <UiMainButton class="contact-form__grid-item--button">Enviar</UiMainButton>
+    >
+      <component
+        :is="field.component"
+        v-model="formData[field.vModel]"
+        :input-id="field.id"
+        :label="field.label"
+        :placeholder="field.placeholder"
+        :aria-label="field.ariaLabel"
+        :error="errors[field.vModel]"
+        @blur="validateFieldOnBlur(field.vModel, formData[field.vModel])"
+      />
+    </UiScrollReveal>
+    <UiScrollReveal class="contact-form__grid-item--button">
+      <UiMainButton width="100%">{{ contactForm.button }}</UiMainButton>
+    </UiScrollReveal>
   </form>
 </template>
 
@@ -126,8 +129,6 @@ const sendMessage = async () => {
     }
     &--button {
       grid-column: 1 / -1;
-      background-color: var(--c-primary);
-      color: var(--c-static-black);
     }
     &--policy {
       grid-column: 3 / -1;
