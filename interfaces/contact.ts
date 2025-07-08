@@ -19,4 +19,5 @@ export interface FormField {
 export interface ContactForm {
   title: string;
   fields: FormField[];
+  button: string;
 }
