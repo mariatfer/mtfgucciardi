@@ -17,13 +17,15 @@ const textAlign = computed(() =>
       :bolder="true"
       >{{ projects.title }}</UiTheTitle
     >
-    <UiScrollReveal
-      v-for="card in projects.projectCards"
-      :key="card.id"
-      style="width: 100%"
-    >
-      <ViewsProjectsProjectCard :card="card" />
-    </UiScrollReveal>
+    <div class="projects__cards-section">
+      <UiScrollReveal
+        v-for="card in projects.projectCards"
+        :key="card.id"
+        style="width: 100%"
+      >
+        <ViewsProjectsProjectCard :card="card" />
+      </UiScrollReveal>
+    </div>
   </div>
 </template>
 
@@ -31,10 +33,15 @@ const textAlign = computed(() =>
 .projects {
   margin: var(--s-margin-blocks) 0;
   padding: 0 var(--s-padding-lateral);
- 
+
   @include responsive {
     margin: var(--s-margin-blocks-mobile) 0;
     padding: 0 var(--s-padding-lateral-mobile);
+  }
+
+  &__cards-section {
+    width: 100%;
+    @include flex(column, $gap: 3rem);
   }
 }
 </style>
