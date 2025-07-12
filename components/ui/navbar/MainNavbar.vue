@@ -51,6 +51,10 @@ const { showModal, useOpenModal, useCloseModal } = useModal();
   padding: 1.5rem var(--s-padding-lateral);
   background-color: var(--c-aquamarine);
   max-height: 5rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
   @include responsive {
     padding: var(--s-padding-lateral-mobile);
   }
