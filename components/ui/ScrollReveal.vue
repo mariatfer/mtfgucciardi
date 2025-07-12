@@ -3,11 +3,12 @@ import { onMounted, ref } from "vue";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger);
-
 const el = ref<HTMLElement | null>(null);
 
 onMounted(() => {
+  if (typeof window !== "undefined") {
+    gsap.registerPlugin(ScrollTrigger);
+  }
   if (!el.value) return;
 
   gsap.fromTo(
