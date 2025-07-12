@@ -55,12 +55,8 @@ import { skillsSection } from "@/mocks/about";
   gap: 1rem;
   max-width: 100%;
 
-  @include responsive() {
+  @include responsive(52.5rem) {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  @include responsive(25rem) {
-    grid-template-columns: 1fr;
   }
 
   &__card {
@@ -78,6 +74,10 @@ import { skillsSection } from "@/mocks/about";
     font-size: var(--s-font-h4);
     font-weight: 500;
     color: var(--c-primary);
+
+    @include responsive(25rem) {
+      font-size: 1rem;
+    }
   }
 
   &__icon {
