@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { profileCard } from "@/mocks/about";
+import { infoContact } from "@/mocks/contact";
 const { isResponsiveResolution } = useWindowsResize();
 const textAlign = computed(() =>
   isResponsiveResolution.value ? "center" : "left"
@@ -14,11 +14,19 @@ const textAlign = computed(() =>
       :shadow="false"
       :uppercase="true"
       :bolder="true"
-      >Contact</UiTheTitle
+      >{{ infoContact.title }}</UiTheTitle
     >
-    <p v-for="description in profileCard.description" :key="description.id">
+    <p
+      v-for="description in infoContact.description"
+      :key="description.id"
+      class="contact-info__description"
+    >
       {{ description.text }}
     </p>
+    <span class="contact-info__email">
+      <Icon :name="infoContact.email.icon" class="contact-info__icon" />
+      {{ infoContact.email.text }}
+    </span>
   </section>
 </template>
 
@@ -32,6 +40,22 @@ const textAlign = computed(() =>
     text-align: center;
     margin: var(--s-margin-blocks-mobile) 0;
     padding: 0 var(--s-padding-lateral-mobile);
+  }
+
+  &__description {
+    @include responsive {
+      margin: 0 0 1.5rem 0;
+    }
+  }
+
+  &__email {
+    @include flex($gap: 1rem);
+    font-style: italic;
+  }
+
+  &__icon {
+    width: 1.5rem;
+    height: 1.5rem;
   }
 }
 </style>
