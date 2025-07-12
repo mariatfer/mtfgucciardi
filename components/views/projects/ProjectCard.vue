@@ -23,7 +23,11 @@ defineProps<{
       </div>
     </NuxtLink>
     <h3 class="project-card__title">{{ card.title }}</h3>
-    <p v-for="paragraph in card.description" :key="paragraph.id">
+    <p
+      v-for="paragraph in card.description"
+      :key="paragraph.id"
+      class="project-card__description"
+    >
       {{ paragraph.text }}
     </p>
     <h4 class="project-card__subtitle">{{ card.technologies.title }}</h4>
@@ -44,11 +48,23 @@ defineProps<{
 .project-card {
   @include flex(column, flex-start, flex-start, $gap: 1rem);
   min-width: 100%;
-  padding: 1.5rem 0;
-  margin: 0 0 3rem 0;
+  padding: 3rem;
+  margin: 2rem 0;
+  border-radius: 0.4375rem;
+  @include background;
+  box-shadow: 0 0 3rem #0000003a;
+
+  @include responsive {
+    padding: 2rem 1rem;
+  }
+
   &__title {
     margin: 3rem 0 0 0;
     font-weight: bold;
+  }
+
+  &__description {
+    text-shadow: 4px 3px 0.6rem rgba(0, 0, 0, 0.582);
   }
 
   &__subtitle {
