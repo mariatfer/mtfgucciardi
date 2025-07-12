@@ -16,10 +16,6 @@ export const infoContact: InfoContact = {
     },
     {
       id: 3,
-      text: "I'm actively looking for opportunities to continue learning—whether that's through internships, junior roles, mentorships, or any project that allows me to grow as a developer. I'm also open to collaborating with others or contributing to meaningful initiatives.",
-    },
-    {
-      id: 4,
       text: "If you'd like to connect, feel free to reach out through the form below or by email. I'll do my best to reply as soon as I can. I'm always happy to chat, exchange ideas, or explore new opportunities!",
     },
   ],

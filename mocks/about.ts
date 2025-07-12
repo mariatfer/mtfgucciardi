@@ -63,7 +63,7 @@ export const timelineSection: TimelineSection = {
       date: "Mar 21, 2025 - Jun 9, 2025",
       title: "Internship",
       description:
-        " spent 3 months at Alebat Education, contributing to real-world projects and strengthening my skills in a professional environment.",
+        "I spent 3 months at Alebat Education, contributing to real-world projects and strengthening my skills in a professional environment.",
       icon: "i-lucide-code",
     },
     {
