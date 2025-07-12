@@ -6,6 +6,7 @@ export interface ProfileCard {
   button: {
     text: string;
     icon: string;
+    file: string;
   };
 }
 

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { profileCard } from "@/mocks/about";
-import skillsImg from "@/assets/img/skills.svg";
+
 const { isResponsiveResolution } = useWindowsResize();
 
 const textAlign = computed(() =>
@@ -27,7 +27,7 @@ const width = computed(() =>
       </p>
     </article>
     <UiMainButton
-      :link="skillsImg"
+      :link="profileCard.button.file"
       :width="width"
       download="Fernandez_Maria_Teresa_CV"
       >{{ profileCard.button.text }}<icon :name="profileCard.button.icon"

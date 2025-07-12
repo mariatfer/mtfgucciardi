@@ -55,8 +55,12 @@ import { skillsSection } from "@/mocks/about";
   gap: 1rem;
   max-width: 100%;
 
-  @include responsive(51.875em) {
+  @include responsive() {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include responsive(25rem) {
+    grid-template-columns: 1fr;
   }
 
   &__card {
@@ -66,6 +70,7 @@ import { skillsSection } from "@/mocks/about";
     background-color: var(--c-ligth-aquamarine);
     border-radius: 0.5rem;
     box-shadow: 0 7px 0.5rem #00000062;
+    width: 100%;
   }
 
   &__title {

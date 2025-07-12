@@ -71,7 +71,7 @@ defineProps<{
       border-radius: 50%;
     }
     @include responsive {
-      min-width: 21.875rem;
+      max-width: 53.625rem;
       &::before {
         left: -1.6rem;
         top: 50%;

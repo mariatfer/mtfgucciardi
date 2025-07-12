@@ -12,4 +12,5 @@ export const ICONS = {
   git: "mdi:git",
   mysql: "mdi:database",
   download: "mdi:download",
+  gmail: "skill-icons:gmail-light",
 };
