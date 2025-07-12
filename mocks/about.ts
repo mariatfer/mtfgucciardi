@@ -11,11 +11,11 @@ export const profileCard: ProfileCard = {
   description: [
     {
       id: 1,
-      text: "I'm María, a Full Stack Developer with a passion for crafting dynamic and efficient web applications.",
+      text: "I'm a Frontend Developer based in Madrid with a passion for creating intuitive and visually engaging digital experiences. My work focuses on transforming ideas into clean, responsive, and accessible user interfaces that make an impact. From design systems to performance optimization, I enjoy paying attention to every detail that shapes how people interact with technology.",
     },
     {
       id: 2,
-      text: "I specialize in both front-end and back-end development, ensuring a seamless user experience. I thrive on solving complex problems and continuously learning new technologies. I believe in the power of collaboration and am always eager to contribute to innovative projects.",
+      text: "Driven by curiosity and a commitment to continuous learning, I love exploring new tools and frameworks to stay at the forefront of frontend development. Whether collaborating with teams or working independently, I value clear communication, thoughtful design, and building products that are both beautiful and effective.",
     },
   ],
   button: { text: "Download CV", icon: ICONS.download },
@@ -44,30 +44,34 @@ export const timelineSection: TimelineSection = {
   items: [
     {
       id: 1,
-      date: "Mar 15, 2025",
-      title: "Project Kickoff",
-      description: "Kicked off the project with team alignment.",
+      date: "2021 - 2023",
+      title: "Academic Foundation",
+      description:
+        "I completed high school with a focus on technology, where I discovered my passion for development and programming.",
       icon: "i-lucide-rocket",
     },
     {
       id: 2,
-      date: "Mar 22 2025",
-      title: "Design Phase",
-      description: "User research and design workshops.",
+      date: "2023 - 2025",
+      title: "Web Development (FP DAW)",
+      description:
+        "I completed a vocational program in Web Application Development, gaining solid knowledge in programming, databases, and web design.",
       icon: "i-lucide-palette",
     },
     {
       id: 3,
-      date: "Mar 29 2025",
-      title: "Development Sprint",
-      description: "Frontend and backend development.",
+      date: "Mar 21, 2025 - Jun 9, 2025",
+      title: "Internship",
+      description:
+        " spent 3 months at Alebat Education, contributing to real-world projects and strengthening my skills in a professional environment.",
       icon: "i-lucide-code",
     },
     {
       id: 4,
-      date: "Apr 5 2025",
-      title: "Testing & Deployment",
-      description: "QA testing and performance optimization.",
+      date: "Today",
+      title: "Personal Projects",
+      description:
+        "I'm currently working on personal projects to continue learning, explore new technologies, and build a strong portfolio.",
       icon: "i-lucide-check-circle",
     },
   ],
