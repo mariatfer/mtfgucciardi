@@ -5,6 +5,7 @@ import type {
   TimelineSection,
 } from "@/interfaces/about";
 import skillsImg from "@/assets/img/skills.svg";
+import cv from "@/assets/img/Curriculum-Maria-Teresa-2025.pdf";
 
 export const profileCard: ProfileCard = {
   title: "About Me",
@@ -18,7 +19,7 @@ export const profileCard: ProfileCard = {
       text: "Driven by curiosity and a commitment to continuous learning, I love exploring new tools and frameworks to stay at the forefront of frontend development. Whether collaborating with teams or working independently, I value clear communication, thoughtful design, and building products that are both beautiful and effective.",
     },
   ],
-  button: { text: "Download CV", icon: ICONS.download },
+  button: { text: "Download CV", icon: ICONS.download, file: cv },
 };
 
 export const skillsSection: SkillsSection = {
