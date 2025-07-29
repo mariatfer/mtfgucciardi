@@ -106,7 +106,7 @@ const sendMessage = async () => {
   align-self: center;
   width: 50%;
   @include responsive() {
-    padding: 4rem var(--s-padding-lateral-mobile) var(--s-padding-lateral)
+    padding: 6rem var(--s-padding-lateral-mobile) 9rem
       var(--s-padding-lateral-mobile);
     width: 100%;
     margin: 0;
