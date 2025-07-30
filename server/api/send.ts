@@ -4,7 +4,7 @@ export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig();
   const resend = new Resend(config.RESEND_API_KEY);
   const body = await readBody(event);
-  // Validar datos básicos
+
   if (!body.email || !body.message) {
     return { status: false, error: "Faltan campos obligatorios." };
   }
@@ -21,8 +21,7 @@ export default defineEventHandler(async (event) => {
     });
 
     return { status: true, data };
-  } catch (err) {
-    console.error(err);
+  } catch {
     return { status: false, error: "Error enviando el correo." };
   }
 });
