@@ -28,3 +28,9 @@ export interface TimelineSection {
   title: string;
   items: TimelineItem[];
 }
+
+export interface AboutMe {
+  profileCard: ProfileCard;
+  skillsSection: SkillsSection;
+  timelineSection: TimelineSection;
+}

@@ -1,8 +1,5 @@
-import type { Image } from "@/interfaces/common";
-export interface Icon {
-  id: number;
-  name: string;
-}
+import type { Image, Icon } from "@/interfaces/common";
+
 export interface ProjectCard {
   id: number;
   title: string;
