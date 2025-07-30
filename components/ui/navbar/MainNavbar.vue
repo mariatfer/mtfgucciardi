@@ -1,28 +1,23 @@
 <script setup lang="ts">
-import { navbarLinks } from "@/mocks/navbar";
-import { ICONS } from "@/constants/icons";
+import type { Navbar } from "@/interfaces/locales/navbar";
+
+const { data } = useLocales<Navbar>("navbar");
 const { showModal, useOpenModal, useCloseModal } = useModal();
 </script>
 
 <template>
   <div class="navbar">
-    <UiNavbarDesktop />
+    <UiNavbarDesktop v-if="data?.links" :links="data.links" />
     <UiNavbarHamburger :active="showModal" @toggle="useOpenModal" />
     <ul class="navbar__social">
-      <li>
+      <ClientOnly><UiButtonLanguageButton /></ClientOnly>
+      <li v-for="icon in data?.icons" :key="icon.id">
         <NuxtLink
           target="_blank"
-          href="https://www.linkedin.com/in/maria-teresa-fernandez-gucciardi"
+          :href="icon.href"
           class="navbar__item"
-          ><icon :name="ICONS.linkedin" class="navbar__icon"
-        /></NuxtLink>
-      </li>
-      <li>
-        <NuxtLink
-          target="_blank"
-          href="https://github.com/mariatfer"
-          class="navbar__item"
-          ><icon :name="ICONS.github" class="navbar__icon"
+          :title="icon.title"
+          ><icon :name="resolveIcon(icon.name)" class="navbar__icon"
         /></NuxtLink>
       </li>
     </ul>
@@ -32,8 +27,8 @@ const { showModal, useOpenModal, useCloseModal } = useModal();
     background-color="var(--c-graphite)"
     @close="useCloseModal"
   >
-    <ul class="hamburguer-links">
-      <li v-for="link in navbarLinks" :key="link.id">
+    <ul v-if="data?.links" class="hamburguer-links">
+      <li v-for="link in data.links" :key="link.id">
         <NuxtLink
           :to="link.link"
           class="hamburguer-links__item"
@@ -48,7 +43,7 @@ const { showModal, useOpenModal, useCloseModal } = useModal();
 <style lang="scss" scoped>
 .navbar {
   @include flex(row, center, space-between);
-  padding: 1.5rem var(--s-padding-lateral);
+  padding: 1.5rem var(--s-padding);
   background-color: var(--c-aquamarine);
   max-height: 5rem;
   position: fixed;
@@ -56,13 +51,18 @@ const { showModal, useOpenModal, useCloseModal } = useModal();
   width: 100%;
   z-index: 10;
   @include responsive {
-    padding: var(--s-padding-lateral-mobile);
+    padding: var(--s-padding-mobile);
   }
   &__social {
     @include flex(row, center, space-between, $gap: 1.5rem);
     @include responsive {
       gap: 0.7rem;
     }
+  }
+
+  &__item {
+    @include flex;
+    cursor: pointer;
   }
 
   &__icon {

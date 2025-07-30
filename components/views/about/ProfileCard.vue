@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { profileCard } from "@/mocks/about";
+import type { ProfileCard } from "~/interfaces/locales/about";
+defineProps<ProfileCard>();
 
 const { isResponsiveResolution } = useWindowsResize();
 
@@ -19,18 +20,18 @@ const width = computed(() =>
       :shadow="false"
       :uppercase="true"
       :bolder="true"
-      >{{ profileCard.title }}</UiTheTitle
+      >{{ $props.title }}</UiTheTitle
     >
     <article class="profile-card__content">
-      <p v-for="description in profileCard.description" :key="description.id">
+      <p v-for="description in $props.description" :key="description.id">
         {{ description.text }}
       </p>
     </article>
     <UiMainButton
-      :link="profileCard.button.file"
+      :link="$props.button.file"
       :width="width"
       download="Fernandez_Maria_Teresa_CV"
-      >{{ profileCard.button.text }}<icon :name="profileCard.button.icon"
+      >{{ $props.button.text }}<icon :name="resolveIcon($props.button.icon)"
     /></UiMainButton>
   </section>
 </template>

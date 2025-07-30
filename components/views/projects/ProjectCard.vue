@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ProjectCard } from "@/interfaces/projects";
+import type { ProjectCard } from "~/interfaces/locales/projects";
 
 defineProps<{
   card: ProjectCard;
@@ -35,7 +35,7 @@ defineProps<{
       <Icon
         v-for="icono in card.technologies.icons"
         :key="icono.id"
-        :name="icono.name"
+        :name="resolveIcon(icono.name)"
         class="project-card__icons"
       />
     </UiSlideInFromLeft>

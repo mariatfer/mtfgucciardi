@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { TimelineItem } from "@/interfaces/about";
+import type { TimelineItem } from "~/interfaces/locales/about";
 
 defineProps<{
   items: TimelineItem[];

@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { useRoute } from "vue-router";
-import { navbarLinks } from "@/mocks/navbar";
+import type { NavbarLink } from "@/interfaces/locales/navbar";
+defineProps<{
+  links: NavbarLink[];
+}>();
+
 const route = useRoute();
 
 const isActive = (path: string) => {
@@ -10,7 +14,7 @@ const isActive = (path: string) => {
 
 <template>
   <ul class="navbar-links">
-    <li v-for="link in navbarLinks" :key="link.id">
+    <li v-for="link in links" :key="link.id">
       <NuxtLink
         :to="link.link"
         :class="[

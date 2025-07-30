@@ -92,8 +92,19 @@ const isAnchor = computed(() => {
   cursor: pointer;
   @include flex(row, center, center, $gap: 0.5em);
   &:hover {
-    background-color: var(--bg-hover);
-    color: var(--hover-color);
+    animation: pulse 0.5s infinite alternate;
+    letter-spacing: 0.15rem;
+    background: linear-gradient(
+      130deg,
+      var(--c-medium-yellow),
+      var(--c-dark-yellow)
+    );
+    color: #fff;
+  }
+  @keyframes pulse {
+    to {
+      transform: scale(1.03);
+    }
   }
   &:disabled {
     position: relative;
