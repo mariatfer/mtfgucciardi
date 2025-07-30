@@ -1,9 +1,19 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import type { Contact } from "@/interfaces/locales/contacts";
+const { data } = useLocales<Contact>("contact");
+</script>
 
 <template>
   <div class="contact">
-    <ViewsContactInfoContact />
-    <ViewsContactForm class="contact__form" />
+    <ViewsContactInfoContact
+      v-if="data?.infoContact"
+      v-bind="data.infoContact"
+    />
+    <ViewsContactForm
+      v-if="data?.contactForm"
+      class="contact__form"
+      v-bind="data.contactForm"
+    />
   </div>
 </template>
 
