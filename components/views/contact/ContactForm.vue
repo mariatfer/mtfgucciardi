@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import type { FormData, FormErrors } from "@/interfaces/forms";
 import { validateForm, validateField } from "@/utils/validator";
-import type { ContactForm } from "~/interfaces/locales/contacts";
+import type { ContactForm } from "@/interfaces/locales/contacts";
+import { resolveComponents } from "@/composables/useResolveAssets";
 defineProps<ContactForm>();
 
 const formData = reactive<FormData>({
@@ -53,6 +54,7 @@ const sendMessage = async () => {
       Object.keys(formData).forEach((key) => {
         formData[key as keyof FormData] = "";
       });
+      redirectToPage("thank-you");
     } else {
       submissionError.value = res.error || "Error desconocido.";
     }
@@ -104,7 +106,7 @@ const sendMessage = async () => {
   grid-template-columns: repeat(5, 1fr);
   gap: 2rem 1.5rem;
   align-self: center;
-  width: 50%;
+  width: 55%;
   @include responsive() {
     padding: 6rem var(--s-padding-mobile) 9rem var(--s-padding-mobile);
     width: 100%;

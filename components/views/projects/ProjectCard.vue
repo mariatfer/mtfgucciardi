@@ -37,6 +37,9 @@ defineProps<{
         :key="icono.id"
         :name="resolveIcon(icono.name)"
         class="project-card__icons"
+        :title="icono.title"
+        :aria-label="icono.title"
+        role="img"
       />
     </UiSlideInFromLeft>
 
@@ -47,15 +50,18 @@ defineProps<{
 <style lang="scss">
 .project-card {
   @include flex(column, flex-start, flex-start, $gap: 1rem);
-  min-width: 100%;
-  padding: 3rem;
-  margin: 2rem 0;
-  border-radius: 0.4375rem;
+  width: fit-content;
+  padding: var(--s-padding);
+  margin: 3rem var(--s-margin) 0 var(--s-margin);
+  border-radius: 4.6875rem;
   @include background;
   box-shadow: 0 0 3rem #0000003a;
 
   @include responsive {
-    padding: 2rem 1rem;
+    padding: 4rem var(--s-padding-mobile);
+    margin: 3rem 0 0 0;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
 
   &__title {
@@ -64,7 +70,7 @@ defineProps<{
   }
 
   &__description {
-    text-shadow: 4px 3px 0.6rem rgba(0, 0, 0, 0.582);
+    text-shadow: 0.25rem 0.1875rem 0.6rem rgba(0, 0, 0, 0.582);
   }
 
   &__subtitle {
@@ -105,14 +111,14 @@ defineProps<{
     background: #ecf1f7;
     background-image: linear-gradient(to bottom, #333, #111);
     box-shadow: 0 0.1rem 0 #cfcfcf;
-    border: 2px solid #ccc;
+    border: 0.125rem solid #ccc;
     @include responsive {
       padding: 4%;
     }
   }
 
   &__image {
-    border-radius: 10px;
+    border-radius: 0.625rem;
     display: block;
     max-width: 100%;
     height: auto;
