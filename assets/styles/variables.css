@@ -4,6 +4,7 @@
   --c-aquamarine: #288888;
   --c-ligth-aquamarine: #509999;
   --c-primary: #FECD6C;
+  --c-medium-yellow: #ff9900;
   --c-dark-yellow: #C86B1E;
   --c-red: red;
   --c-dark-red: #a70505;
@@ -16,7 +17,6 @@
   --f-font-text: 'Quicksand';
 
   --s-border-radius-button: 0.25rem;
-  --s-border-radius-card: 0.625rem;
   --s-font-h1: 3rem;
   --s-font-h2: 3rem;
   --s-font-h3: 2rem;
@@ -28,9 +28,9 @@
   --s-font-h2-mobile: 2rem;
   --s-font-h3-mobile: 1.5rem;
   --s-font-h4-mobile: 1.3125rem;
-  --s-margin-blocks: 7rem;
-  --s-margin-blocks-mobile: 3.5rem;
-  --s-padding-lateral: 7rem;
-  --s-padding-lateral-mobile: 2rem;
+  --s-margin: 7rem;
+  --s-margin-mobile: 3.5rem;
+  --s-padding: 7rem;
+  --s-padding-mobile: 2rem;
   --t-transition-button: 0.3s;
 }
