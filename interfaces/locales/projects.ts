@@ -17,5 +17,6 @@ export interface ProjectCard {
 
 export interface Projects {
   title: string;
+  paragraph: string;
   projectCards: ProjectCard[];
 }
