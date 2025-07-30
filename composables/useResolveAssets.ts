@@ -5,6 +5,6 @@ export function resolveIcon(key: string) {
   return ICONS[key as keyof typeof ICONS];
 }
 
-export function resolveComponent(key: string) {
+export function resolveComponents(key: string) {
   return COMPONENTS[key as keyof typeof COMPONENTS];
 }
