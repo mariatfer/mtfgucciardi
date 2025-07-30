@@ -54,10 +54,9 @@ const styles = computed(() => ({
   &:hover {
     color: var(--c-primary);
     scale: 1.2;
-    transform: rotate(-90deg);
-    transform-origin: center;
+    transform: scale(1.05);
   }
-  
+
   @include responsive() {
     top: 1em;
     right: 1em;

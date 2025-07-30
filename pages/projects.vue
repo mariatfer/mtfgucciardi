@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { projects } from "@/mocks/projects";
+import type { Projects } from "@/interfaces/locales/projects";
+const { data } = useLocales<Projects>("projects");
 const { isResponsiveResolution } = useWindowsResize();
 
 const textAlign = computed(() =>
@@ -10,16 +11,17 @@ const textAlign = computed(() =>
 <template>
   <div class="projects">
     <UiTheTitle
+      v-if="data?.title"
       :text-align="textAlign"
       color="var(--c-primary)"
       :shadow="false"
       :uppercase="true"
       :bolder="true"
-      >{{ projects.title }}</UiTheTitle
+      >{{ data.title }}</UiTheTitle
     >
-    <div class="projects__cards-section">
+    <div v-if="data?.projectCards" class="projects__cards-section">
       <UiScrollReveal
-        v-for="card in projects.projectCards"
+        v-for="card in data.projectCards"
         :key="card.id"
         style="width: 100%"
       >
@@ -31,12 +33,12 @@ const textAlign = computed(() =>
 
 <style lang="scss">
 .projects {
-  margin: var(--s-margin-blocks) 0;
-  padding: 0 var(--s-padding-lateral);
+  margin: var(--s-margin) 0;
+  padding: 0 var(--s-padding);
 
   @include responsive {
-    margin: var(--s-margin-blocks-mobile) 0;
-    padding: 0 var(--s-padding-lateral-mobile);
+    margin: var(--s-margin-mobile) 0;
+    padding: 0 var(--s-padding-mobile);
   }
 
   &__cards-section {

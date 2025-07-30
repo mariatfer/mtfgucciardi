@@ -13,4 +13,6 @@ export const ICONS = {
   mysql: "mdi:database",
   download: "mdi:download",
   gmail: "skill-icons:gmail-light",
+  spain: "circle-flags:lang-es",
+  england: "circle-flags:en",
 };

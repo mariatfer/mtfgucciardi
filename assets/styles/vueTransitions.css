@@ -117,7 +117,7 @@
 
 .modal-slide-enter-from,
 .modal-slide-leave-to {
-  transform: translateY(100vh);
+  transform: translateX(-100vw);
 }
 
 .fade-pages-enter-active,

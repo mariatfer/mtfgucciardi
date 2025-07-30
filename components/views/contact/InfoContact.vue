@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { infoContact } from "@/mocks/contact";
+import type { InfoContact } from "~/interfaces/locales/contacts";
+defineProps<InfoContact>();
 const { isResponsiveResolution } = useWindowsResize();
 const textAlign = computed(() =>
   isResponsiveResolution.value ? "center" : "left"
@@ -14,18 +15,18 @@ const textAlign = computed(() =>
       :shadow="false"
       :uppercase="true"
       :bolder="true"
-      >{{ infoContact.title }}</UiTheTitle
+      >{{ $props.title }}</UiTheTitle
     >
     <p
-      v-for="description in infoContact.description"
+      v-for="description in $props.description"
       :key="description.id"
       class="contact-info__description"
     >
       {{ description.text }}
     </p>
     <span class="contact-info__email">
-      <Icon :name="infoContact.email.icon" class="contact-info__icon" />
-      {{ infoContact.email.text }}
+      <Icon :name="resolveIcon($props.email.icon)" class="contact-info__icon" />
+      {{ $props.email.text }}
     </span>
   </section>
 </template>
@@ -33,13 +34,13 @@ const textAlign = computed(() =>
 <style lang="scss" scoped>
 .contact-info {
   @include flex(column, flex-start, space-between, $gap: 1.5rem);
-  margin: var(--s-margin-blocks) 0;
-  padding: 0 var(--s-padding-lateral);
+  margin: var(--s-margin) 0;
+  padding: 0 var(--s-padding);
   @include responsive {
     @include flex(column, center, space-between, $gap: 1rem);
     text-align: center;
-    margin: var(--s-margin-blocks-mobile) 0;
-    padding: 0 var(--s-padding-lateral-mobile);
+    margin: var(--s-margin-mobile) 0;
+    padding: 0 var(--s-padding-mobile);
   }
 
   &__description {

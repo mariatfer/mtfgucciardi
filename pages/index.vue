@@ -1,17 +1,18 @@
 <script setup lang="ts">
-import { home } from "@/mocks/home";
+import type { Home } from "@/interfaces/locales/home";
+const { data } = useLocales<Home>("home");
 </script>
 
 <template>
-  <div class="home">
+  <div v-if="data" class="home">
     <section class="home__presentation">
-      <UiTheTitle>{{ home.title }}</UiTheTitle>
+      <UiTheTitle>{{ data.title }}</UiTheTitle>
       <p class="home__description">
-        {{ home.description }}
+        {{ data.description }}
       </p>
     </section>
     <section class="home__character">
-      <img :src="home.image.url" :alt="home.image.alt" class="home__image" />
+      <img :src="data.image.url" :alt="data.image.alt" class="home__image" />
     </section>
   </div>
 </template>
@@ -27,12 +28,12 @@ import { home } from "@/mocks/home";
     height: 100%;
   }
   &__presentation {
-    margin: var(--s-margin-blocks) 0;
-    padding: 0 var(--s-padding-lateral);
+    margin: var(--s-margin) 0;
+    padding: 0 var(--s-padding);
     max-width: 50%;
     @include responsive {
       max-width: unset;
-      padding: 0 var(--s-padding-lateral-mobile);
+      padding: 0 var(--s-padding-mobile);
     }
   }
 

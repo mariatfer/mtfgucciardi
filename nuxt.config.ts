@@ -1,4 +1,5 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import i18nConfig from "./config/i18n";
+
 export default defineNuxtConfig({
   compatibilityDate: "2025-05-15",
   devtools: { enabled: true },
@@ -14,7 +15,10 @@ export default defineNuxtConfig({
     "@nuxt/scripts",
     "@nuxt/test-utils",
     "@nuxt/ui",
+    "@pinia/nuxt",
+    "@nuxtjs/i18n",
   ],
+  ssr: false,
   css: [
     "@/assets/styles/fonts.css",
     "@/assets/styles/vueTransitions.css",
@@ -28,6 +32,16 @@ export default defineNuxtConfig({
           additionalData: '@use "assets/styles/mixin.scss" as *;',
         },
       },
+    },
+  },
+  plugins: ["@/plugins/init-language.client.ts"],
+  i18n: {
+    ...i18nConfig,
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: "i18n_redirected",
+      redirectOn: "root",
+      fallbackLocale: "es",
     },
   },
 });

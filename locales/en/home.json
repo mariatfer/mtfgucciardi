@@ -1,0 +1,9 @@
+{
+  "title": "Hi. I'm María",
+  "description":
+    "I'm a Frontend Developer passionate about crafting performant, accessible, and visually engaging web interfaces with modern technologies.",
+  "image": {
+    "url": "/img/character.svg",
+    "alt": "Character Illustration"
+  }
+}

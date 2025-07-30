@@ -1,6 +1,4 @@
 import type { FormData } from "@/interfaces/forms";
-import type UiFormInputField from "@/components/ui/form/InputField.vue";
-import type UiFormTextareaField from "@/components/ui/form/TextareaField.vue";
 
 export interface InfoContact {
   title: string;
@@ -11,13 +9,9 @@ export interface InfoContact {
   };
 }
 
-export type ContactFormComponent =
-  | typeof UiFormInputField
-  | typeof UiFormTextareaField;
-
 export interface FormField {
   id: string;
-  component: ContactFormComponent;
+  component: string;
   vModel: keyof FormData;
   label: string;
   placeholder: string;
@@ -29,4 +23,9 @@ export interface ContactForm {
   title: string;
   fields: FormField[];
   button: string;
+}
+
+export interface Contact {
+  infoContact: InfoContact;
+  contactForm: ContactForm;
 }

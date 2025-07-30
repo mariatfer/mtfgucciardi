@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import { ref } from "vue";
 import type { FormData, FormErrors } from "@/interfaces/forms";
 import { validateForm, validateField } from "@/utils/validator";
-import { contactForm } from "@/mocks/contact";
+import type { ContactForm } from "~/interfaces/locales/contacts";
+defineProps<ContactForm>();
+
 const formData = reactive<FormData>({
   name: "",
   lastName: "",
@@ -55,9 +56,8 @@ const sendMessage = async () => {
     } else {
       submissionError.value = res.error || "Error desconocido.";
     }
-  } catch (err) {
+  } catch {
     submissionError.value = "Error al enviar el mensaje.";
-    console.error(err);
   }
 };
 </script>
@@ -69,15 +69,15 @@ const sendMessage = async () => {
       color="var(--c-primary)"
       style="font-style: italic"
       class="contact-form__grid-item"
-      >{{ contactForm.title }}</UiTheTitle
+      >{{ $props.title }}</UiTheTitle
     >
     <UiScrollReveal
-      v-for="field in contactForm.fields"
+      v-for="field in $props.fields"
       :key="field.id"
       :class="['contact-form__grid-item', field.twoColumns || '']"
     >
       <component
-        :is="field.component"
+        :is="resolveComponents(field.component)"
         v-model="formData[field.vModel]"
         :input-id="field.id"
         :label="field.label"
@@ -88,15 +88,15 @@ const sendMessage = async () => {
       />
     </UiScrollReveal>
     <UiScrollReveal class="contact-form__grid-item--button">
-      <UiMainButton width="100%">{{ contactForm.button }}</UiMainButton>
+      <UiMainButton width="100%">{{ $props.button }}</UiMainButton>
     </UiScrollReveal>
   </form>
 </template>
 
 <style lang="scss">
 .contact-form {
-  padding: var(--s-padding-lateral);
-  margin: 0 0 var(--s-margin-blocks) 0;
+  padding: var(--s-padding);
+  margin: 0 0 var(--s-margin) 0;
   @include background;
   box-shadow: 0 0 3rem #0000003a;
   border-radius: 0.5rem;
@@ -106,8 +106,7 @@ const sendMessage = async () => {
   align-self: center;
   width: 50%;
   @include responsive() {
-    padding: 4rem var(--s-padding-lateral-mobile) var(--s-padding-lateral)
-      var(--s-padding-lateral-mobile);
+    padding: 6rem var(--s-padding-mobile) 9rem var(--s-padding-mobile);
     width: 100%;
     margin: 0;
     align-self: initial;

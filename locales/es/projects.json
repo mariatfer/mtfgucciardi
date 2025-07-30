@@ -1,0 +1,103 @@
+{
+  "title": "Proyectos",
+  "projectCards": [
+    {
+      "id": 1,
+      "title": "AFR Design & Printing",
+      "image": {
+        "url": "/img/afrimpresiones.png",
+        "alt": "Mockup de una tienda en línea para productos personalizados"
+      },
+      "description": [
+        {
+          "id": 1,
+          "text": "AFR Impresiones es una plataforma de comercio electrónico diseñada para brindar una experiencia eficiente tanto a los clientes como a los administradores."
+        },
+        {
+          "id": 2,
+          "text": "La aplicación permite a los usuarios registrarse y gestionar su perfil con datos actualizables como nombre, correo electrónico, teléfono y dirección, asegurando una sesión segura y personalizada."
+        },
+        {
+          "id": 3,
+          "text": "El proceso de pedido, aunque no incluye una pasarela de pago ni un formulario para completar la compra, permite que los pedidos se almacenen en la base de datos, los cuales los usuarios pueden consultar directamente desde su perfil. Esto permite un seguimiento organizado y eficiente de las compras realizadas."
+        }
+      ],
+      "technologies": {
+        "title": "Tecnologías utilizadas",
+        "icons": [
+          {
+            "id": 1,
+            "name": "html"
+          },
+          {
+            "id": 2,
+            "name": "css"
+          },
+          {
+            "id": 3,
+            "name": "javascript"
+          },
+          {
+            "id": 4,
+            "name": "php"
+          },
+          {
+            "id": 5,
+            "name": "mysql"
+          }
+        ]
+      },
+      "button": {
+        "text": "Ver proyecto",
+        "link": "https://afrimpresiones.com/"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Vibe-Live",
+      "image": {
+        "url": "/img/vibe-live.png",
+        "alt": "Mockup de un clon de Twitch"
+      },
+      "description": [
+        {
+          "id": 1,
+          "text": "Vibe Live es una plataforma de streaming en tiempo real inspirada en Twitch, creada con Nuxt.js, Vue.js y TypeScript. Utiliza la API oficial de Twitch para autenticar usuarios y mostrar datos de canales y transmisiones."
+        },
+        {
+          "id": 2,
+          "text": "Los usuarios pueden disfrutar de una experiencia completa de streaming con visualización de transmisiones en vivo y chat en tiempo real."
+        },
+        {
+          "id": 3,
+          "text": "El proyecto está desplegado en Vercel y está optimizado tanto para dispositivos de escritorio como móviles."
+        }
+      ],
+      "technologies": {
+        "title": "Tecnologías utilizadas",
+        "icons": [
+          {
+            "id": 1,
+            "name": "nuxt"
+          },
+          {
+            "id": 2,
+            "name": "vue"
+          },
+          {
+            "id": 3,
+            "name": "typescript"
+          },
+          {
+            "id": 4,
+            "name": "sass"
+          }
+        ]
+      },
+      "button": {
+        "text": "Ver proyecto",
+        "link": "https://vibe-live.vercel.app/"
+      }
+    }
+  ]
+}

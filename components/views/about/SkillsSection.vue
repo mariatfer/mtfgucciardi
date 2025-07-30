@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { skillsSection } from "@/mocks/about";
+import type { SkillsSection } from "~/interfaces/locales/about";
+defineProps<SkillsSection>();
 </script>
 
 <template>
@@ -9,18 +10,18 @@ import { skillsSection } from "@/mocks/about";
       :shadow="false"
       :uppercase="true"
       :bolder="true"
-      >{{ skillsSection.title }}</UiTheTitle
+      >{{ $props.title }}</UiTheTitle
     >
     <div class="skills__container">
       <img
-        :src="skillsSection.image.url"
-        :alt="skillsSection.image.alt"
+        :src="$props.image.url"
+        :alt="$props.image.alt"
         class="skills__image"
       />
       <article class="skills-grid">
-        <UiScrollReveal v-for="skill in skillsSection.skills" :key="skill.id">
+        <UiScrollReveal v-for="skill in $props.skills" :key="skill.id">
           <section class="skills-grid__card">
-            <icon :name="skill.icon" class="skills-grid__icon" />
+            <icon :name="resolveIcon(skill.icon)" class="skills-grid__icon" />
             <h4 class="skills-grid__title">{{ skill.text }}</h4>
           </section>
         </UiScrollReveal>
