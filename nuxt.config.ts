@@ -14,6 +14,7 @@ export default defineNuxtConfig({
     "@nuxt/scripts",
     "@nuxt/test-utils",
     "@nuxt/ui",
+    "@pinia/nuxt",
   ],
   css: [
     "@/assets/styles/fonts.css",
@@ -30,4 +31,5 @@ export default defineNuxtConfig({
       },
     },
   },
+  plugins: ["@/plugins/init-language.client.ts"],
 });
