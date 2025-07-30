@@ -1,0 +1,24 @@
+{
+  "title": "¡Gracias!",
+  "subtitle": "¡Tu mensaje ha sido enviado exitosamente!",
+  "paragraphs": [
+    {
+      "id": 1,
+      "parts": [
+        "Recibirás una respuesta dentro de 24 a 48 horas. Si tarda un poco más, probablemente esté ocupado con otros proyectos. Por favor, permite 1-2 días hábiles adicionales."
+      ]
+    },
+    {
+      "id": 2,
+      "parts": [
+        "Si no has recibido respuesta después de ese tiempo, puede haber habido un problema con el mensaje. En ese caso, no dudes en enviarme un correo electrónico a ",
+        { "type": "email", "value": "mt.fgucciardi@gmail.com" },
+        "."
+      ]
+    },
+    {
+      "id": 3,
+      "parts": ["¡Gracias de nuevo, y que tengas un excelente día!"]
+    }
+  ]
+}

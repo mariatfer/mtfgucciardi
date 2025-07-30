@@ -47,7 +47,7 @@ defineProps<SkillsSection>();
     width: 100%;
     max-width: 19.4375rem;
     height: auto;
-    filter: drop-shadow(0 15px 0.5rem #00000062);
+    filter: drop-shadow(0 .9375rem 0.5rem #00000062);
   }
 }
 .skills-grid {
@@ -66,7 +66,7 @@ defineProps<SkillsSection>();
     padding: 1rem;
     background-color: var(--c-ligth-aquamarine);
     border-radius: 0.5rem;
-    box-shadow: 0 7px 0.5rem #00000062;
+    box-shadow: 0 .4375rem 0.5rem #00000062;
     width: 100%;
   }
 

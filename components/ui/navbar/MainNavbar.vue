@@ -30,7 +30,7 @@ const { showModal, useOpenModal, useCloseModal } = useModal();
     <ul v-if="data?.links" class="hamburguer-links">
       <li v-for="link in data.links" :key="link.id">
         <NuxtLinkLocale
-          :to="link.link"
+          :to="link.route"
           class="hamburguer-links__item"
           @click="useCloseModal"
           >{{ link.text }}

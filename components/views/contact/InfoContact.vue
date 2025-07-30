@@ -24,10 +24,10 @@ const textAlign = computed(() =>
     >
       {{ description.text }}
     </p>
-    <span class="contact-info__email">
+    <NuxtLink class="contact-info__email" :href="'mailto:' + $props.email.text">
       <Icon :name="resolveIcon($props.email.icon)" class="contact-info__icon" />
       {{ $props.email.text }}
-    </span>
+    </NuxtLink>
   </section>
 </template>
 

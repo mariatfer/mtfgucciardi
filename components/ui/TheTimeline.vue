@@ -55,7 +55,7 @@ defineProps<{
   &__item {
     @include flex(row, flex-start);
     position: relative;
-    box-shadow: 0 7px 1rem #00000062;
+    box-shadow: 0 .4375rem 1rem #00000062;
     padding: 1rem;
     border-radius: 0.5rem;
 

@@ -40,7 +40,7 @@ const { data } = useLocales<Home>("home");
   &__description {
     text-align: center;
     margin: 1rem 0 0 0;
-    text-shadow: 4px 3px 0.2rem rgba(0, 0, 0, 0.582);
+    text-shadow: .25rem .1875rem 0.2rem rgba(0, 0, 0, 0.582);
     @include responsive {
       margin: 0;
     }

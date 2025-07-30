@@ -1,5 +1,6 @@
 {
   "title": "Projects",
+  "paragraph": "Welcome to the projects section of my portfolio. Here you'll find a selection of my most recent work as a junior frontend developer, showcasing my skills in Vue.js, Nuxt.js, TypeScript, and Sass. Each project reflects my commitment to creating fast, scalable web interfaces with an appealing design. I hope it inspires you, and I look forward to collaborating soon!",
   "projectCards": [
     {
       "id": 1,
@@ -27,23 +28,28 @@
         "icons": [
           {
             "id": 1,
-            "name": "html"
+            "name": "html",
+            "title": "HTML5"
           },
           {
             "id": 2,
-            "name": "css"
+            "name": "css",
+            "title": "CSS"
           },
           {
             "id": 3,
-            "name": "javascript"
+            "name": "javascript",
+            "title": "JavaScript"
           },
           {
             "id": 4,
-            "name": "php"
+            "name": "php",
+            "title": "PHP"
           },
           {
             "id": 5,
-            "name": "mysql"
+            "name": "mysql",
+            "title": "MySQL"
           }
         ]
       },
@@ -78,19 +84,23 @@
         "icons": [
           {
             "id": 1,
-            "name": "nuxt"
+            "name": "nuxt",
+            "title": "Nuxt"
           },
           {
             "id": 2,
-            "name": "vue"
+            "name": "vue",
+            "title": "Vue"
           },
           {
             "id": 3,
-            "name": "typescript"
+            "name": "typescript",
+            "title": "TypeScript"
           },
           {
             "id": 4,
-            "name": "sass"
+            "name": "sass",
+            "title": "SCSS"
           }
         ]
       },

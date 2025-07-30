@@ -17,8 +17,12 @@ const textAlign = computed(() =>
       :shadow="false"
       :uppercase="true"
       :bolder="true"
+      class="projects__title"
       >{{ data.title }}</UiTheTitle
     >
+    <p v-if="data?.paragraph" class="projects__paragraph">
+      {{ data.paragraph }}
+    </p>
     <div v-if="data?.projectCards" class="projects__cards-section">
       <UiScrollReveal
         v-for="card in data.projectCards"
@@ -33,12 +37,23 @@ const textAlign = computed(() =>
 
 <style lang="scss">
 .projects {
-  margin: var(--s-margin) 0;
-  padding: 0 var(--s-padding);
+  &__title {
+    margin: var(--s-margin) 0 0 0;
+    padding: 0 var(--s-padding);
 
-  @include responsive {
-    margin: var(--s-margin-mobile) 0;
-    padding: 0 var(--s-padding-mobile);
+    @include responsive {
+      margin: var(--s-margin-mobile) 0 0 0;
+      padding: 0 var(--s-padding-mobile);
+    }
+  }
+  &__paragraph {
+    margin: 1.5rem 0 0 0;
+    padding: 0 var(--s-padding);
+
+    @include responsive {
+      margin: 1rem 0 0 0;
+      padding: 0 var(--s-padding-mobile);
+    }
   }
 
   &__cards-section {
