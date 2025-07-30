@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { ref } from "vue";
 import type { FormData, FormErrors } from "@/interfaces/forms";
 import { validateForm, validateField } from "@/utils/validator";
 import type { ContactForm } from "~/interfaces/locales/contacts";
@@ -57,9 +56,8 @@ const sendMessage = async () => {
     } else {
       submissionError.value = res.error || "Error desconocido.";
     }
-  } catch (err) {
+  } catch {
     submissionError.value = "Error al enviar el mensaje.";
-    console.error(err);
   }
 };
 </script>
@@ -79,7 +77,7 @@ const sendMessage = async () => {
       :class="['contact-form__grid-item', field.twoColumns || '']"
     >
       <component
-        :is="resolveComponent(field.component)"
+        :is="resolveComponents(field.component)"
         v-model="formData[field.vModel]"
         :input-id="field.id"
         :label="field.label"
@@ -108,8 +106,7 @@ const sendMessage = async () => {
   align-self: center;
   width: 50%;
   @include responsive() {
-    padding: 6rem var(--s-padding-mobile) 9rem
-      var(--s-padding-mobile);
+    padding: 6rem var(--s-padding-mobile) 9rem var(--s-padding-mobile);
     width: 100%;
     margin: 0;
     align-self: initial;

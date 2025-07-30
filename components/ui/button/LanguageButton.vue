@@ -2,12 +2,15 @@
 import { useLanguageStore } from "@/stores/language";
 import { storeToRefs } from "pinia";
 import { gsap } from "gsap";
+import { useI18n } from "vue-i18n"; // 👈 Aquí importas la función
 
 const languageStore = useLanguageStore();
 const { currentLanguageInfo, isReady } = storeToRefs(languageStore);
 const isFading = ref(false);
 
 const overlay = inject<Ref<HTMLElement | null>>("overlayRef");
+
+const { setLocale } = useI18n();
 
 const handleLanguageChange = () => {
   if (!overlay?.value) return;
@@ -18,7 +21,7 @@ const handleLanguageChange = () => {
     duration: 0.4,
     onComplete: () => {
       languageStore.toggleLanguage();
-
+      setLocale(languageStore.currentLanguageInfo!.value);
       gsap.to(overlay.value, {
         opacity: 0,
         duration: 0.4,

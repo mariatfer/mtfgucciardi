@@ -10,7 +10,7 @@ const { showModal, useOpenModal, useCloseModal } = useModal();
     <UiNavbarDesktop v-if="data?.links" :links="data.links" />
     <UiNavbarHamburger :active="showModal" @toggle="useOpenModal" />
     <ul class="navbar__social">
-      <ClientOnly><UiButtonLanguageButton /></ClientOnly>
+      <UiButtonLanguageButton />
       <li v-for="icon in data?.icons" :key="icon.id">
         <NuxtLink
           target="_blank"
@@ -29,12 +29,12 @@ const { showModal, useOpenModal, useCloseModal } = useModal();
   >
     <ul v-if="data?.links" class="hamburguer-links">
       <li v-for="link in data.links" :key="link.id">
-        <NuxtLink
+        <NuxtLinkLocale
           :to="link.link"
           class="hamburguer-links__item"
           @click="useCloseModal"
-          >{{ link.text }}</NuxtLink
-        >
+          >{{ link.text }}
+        </NuxtLinkLocale>
       </li>
     </ul>
   </UiTheModal>

@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { useRoute } from "vue-router";
 import type { NavbarLink } from "@/interfaces/locales/navbar";
 defineProps<{
   links: NavbarLink[];
@@ -15,15 +14,15 @@ const isActive = (path: string) => {
 <template>
   <ul class="navbar-links">
     <li v-for="link in links" :key="link.id">
-      <NuxtLink
-        :to="link.link"
+      <NuxtLinkLocale
+        :to="link.route"
         :class="[
           'navbar-links__item',
-          { 'navbar-links__item--active': isActive(link.link) },
+          { 'navbar-links__item--active': isActive(link.route) },
         ]"
       >
         {{ link.text }}
-      </NuxtLink>
+      </NuxtLinkLocale>
     </li>
   </ul>
 </template>
