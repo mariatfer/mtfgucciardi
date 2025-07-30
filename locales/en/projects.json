@@ -1,0 +1,103 @@
+{
+  "title": "Projects",
+  "projectCards": [
+    {
+      "id": 1,
+      "title": "AFR Design & Printing",
+      "image": {
+        "url": "/img/afrimpresiones.png",
+        "alt": "Mockup of an online store for personalized products"
+      },
+      "description": [
+        {
+          "id": 1,
+          "text": "AFR Impresiones is an e-commerce platform designed to provide an efficient experience for both customers and administrators."
+        },
+        {
+          "id": 2,
+          "text": "The app allows users to register and manage their profile with updatable data such as name, email, phone, and address, ensuring a secure and personalized session."
+        },
+        {
+          "id": 3,
+          "text": "The order process, although it doesn't include a payment gateway or a form to complete the purchase, allows orders to be stored in the database, which users can consult directly from their profile. This enables an organized and efficient tracking of completed purchases."
+        }
+      ],
+      "technologies": {
+        "title": "Technologies used",
+        "icons": [
+          {
+            "id": 1,
+            "name": "html"
+          },
+          {
+            "id": 2,
+            "name": "css"
+          },
+          {
+            "id": 3,
+            "name": "javascript"
+          },
+          {
+            "id": 4,
+            "name": "php"
+          },
+          {
+            "id": 5,
+            "name": "mysql"
+          }
+        ]
+      },
+      "button": {
+        "text": "View project",
+        "link": "https://afrimpresiones.com/"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Vibe-Live",
+      "image": {
+        "url": "/img/vibe-live.png",
+        "alt": "Mockup of a Twitch clone"
+      },
+      "description": [
+        {
+          "id": 1,
+          "text": "Vibe Live is a real-time streaming platform inspired by Twitch, created with Nuxt.js, Vue.js, and TypeScript. It uses the official Twitch API to authenticate users, display channel and stream data."
+        },
+        {
+          "id": 2,
+          "text": "Users can enjoy a complete streaming experience with live broadcast viewing and real-time chat."
+        },
+        {
+          "id": 3,
+          "text": "The project is deployed on Vercel and is optimized for both desktop and mobile devices."
+        }
+      ],
+      "technologies": {
+        "title": "Technologies used",
+        "icons": [
+          {
+            "id": 1,
+            "name": "nuxt"
+          },
+          {
+            "id": 2,
+            "name": "vue"
+          },
+          {
+            "id": 3,
+            "name": "typescript"
+          },
+          {
+            "id": 4,
+            "name": "sass"
+          }
+        ]
+      },
+      "button": {
+        "text": "View project",
+        "link": "https://vibe-live.vercel.app/"
+      }
+    }
+  ]
+}

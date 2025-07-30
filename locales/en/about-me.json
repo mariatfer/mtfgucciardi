@@ -1,0 +1,70 @@
+{
+  "profileCard": {
+    "title": "About Me",
+    "description": [
+      {
+        "id": 1,
+        "text": "I'm a Frontend Developer based in Madrid with a passion for creating intuitive and visually engaging digital experiences. My work focuses on transforming ideas into clean, responsive, and accessible user interfaces that make an impact. From design systems to performance optimization, I enjoy paying attention to every detail that shapes how people interact with technology."
+      },
+      {
+        "id": 2,
+        "text": "Driven by curiosity and a commitment to continuous learning, I love exploring new tools and frameworks to stay at the forefront of frontend development. Whether collaborating with teams or working independently, I value clear communication, thoughtful design, and building products that are both beautiful and effective."
+      }
+    ],
+    "button": {
+      "text": "Download CV",
+      "icon": "download",
+      "file": "/Curriculum-Maria-Teresa-2025.pdf"
+    }
+  },
+  "skillsSection": {
+    "title": "Skills",
+    "image": {
+      "url": "/img/skills.svg",
+      "alt": "Skills Illustration"
+    },
+    "skills": [
+      { "id": 1, "text": "JavaScript", "icon": "javascript" },
+      { "id": 2, "text": "TypeScript", "icon": "typescript" },
+      { "id": 3, "text": "Vue.js", "icon": "vue" },
+      { "id": 4, "text": "Nuxt.js", "icon": "nuxt" },
+      { "id": 5, "text": "HTML5", "icon": "html" },
+      { "id": 6, "text": "CSS3", "icon": "css" },
+      { "id": 7, "text": "SASS", "icon": "sass" },
+      { "id": 8, "text": "Git", "icon": "git" }
+    ]
+  },
+  "timelineSection": {
+    "title": "Timeline",
+    "items": [
+      {
+        "id": 1,
+        "date": "2021 - 2023",
+        "title": "Academic Foundation",
+        "description": "I completed high school with a focus on technology, where I discovered my passion for development and programming.",
+        "icon": "i-lucide-rocket"
+      },
+      {
+        "id": 2,
+        "date": "2023 - 2025",
+        "title": "Web Development (FP DAW)",
+        "description": "I completed a vocational program in Web Application Development, gaining solid knowledge in programming, databases, and web design.",
+        "icon": "i-lucide-palette"
+      },
+      {
+        "id": 3,
+        "date": "Mar 21, 2025 - Jun 9, 2025",
+        "title": "Internship",
+        "description": "I spent 3 months at Alebat Education, contributing to real-world projects and strengthening my skills in a professional environment.",
+        "icon": "i-lucide-code"
+      },
+      {
+        "id": 4,
+        "date": "Today",
+        "title": "Personal Projects",
+        "description": "I'm currently working on personal projects to continue learning, explore new technologies, and build a strong portfolio.",
+        "icon": "i-lucide-check-circle"
+      }
+    ]
+  }
+}

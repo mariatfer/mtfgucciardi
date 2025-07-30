@@ -1,0 +1,65 @@
+{
+  "infoContact": {
+    "title": "Contacto",
+    "description": [
+      {
+        "id": 1,
+        "text": "¡Gracias por visitar mi portafolio! Ya sea que estés aquí por curiosidad, buscando a alguien con quien colaborar o simplemente explorando, agradezco que te tomes el tiempo de conocer mi trabajo y mi trayectoria como desarrollador web."
+      },
+      {
+        "id": 2,
+        "text": "Actualmente estoy enfocado en crear proyectos personales de frontend y mejorar mis habilidades en tecnologías como HTML, CSS, JavaScript y frameworks modernos. Disfruto convertir ideas en experiencias web receptivas, accesibles y visualmente atractivas."
+      },
+      {
+        "id": 3,
+        "text": "Si deseas ponerte en contacto, no dudes en hacerlo a través del formulario de abajo o por correo electrónico. Haré lo posible por responder lo antes posible. ¡Siempre estoy dispuesto a conversar, intercambiar ideas o explorar nuevas oportunidades!"
+      }
+    ],
+    "email": {
+      "icon": "gmail",
+      "text": "mt.fgucciardi@gmail.com"
+    }
+  },
+  "contactForm": {
+    "title": "Escríbeme",
+    "fields": [
+      {
+        "id": "1",
+        "component": "InputField",
+        "vModel": "name",
+        "label": "Nombre",
+        "placeholder": "Pedro",
+        "ariaLabel": "Nombre",
+        "twoColumns": "contact-form__grid-item--two"
+      },
+      {
+        "id": "2",
+        "component": "InputField",
+        "vModel": "lastName",
+        "label": "Apellido",
+        "placeholder": "Miller",
+        "ariaLabel": "Apellido",
+        "twoColumns": "contact-form__grid-item--three"
+      },
+      {
+        "id": "3",
+        "component": "InputField",
+        "vModel": "email",
+        "label": "Correo electrónico",
+        "placeholder": "tucorreo@ejemplo.com",
+        "ariaLabel": "Correo electrónico",
+        "twoColumns": false
+      },
+      {
+        "id": "4",
+        "component": "TextareaField",
+        "vModel": "message",
+        "label": "Mensaje",
+        "placeholder": "Escribe tu mensaje...",
+        "ariaLabel": "Mensaje",
+        "twoColumns": false
+      }
+    ],
+    "button": "Enviar"
+  }
+}

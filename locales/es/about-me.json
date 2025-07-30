@@ -1,0 +1,70 @@
+{
+  "profileCard": {
+    "title": "Sobre mí",
+    "description": [
+      {
+        "id": 1,
+        "text": "Soy desarrolladora frontend con sede en Madrid y una gran pasión por crear experiencias digitales intuitivas y visualmente atractivas. Mi trabajo se centra en transformar ideas en interfaces limpias, responsivas y accesibles que generan impacto. Desde sistemas de diseño hasta la optimización del rendimiento, disfruto prestando atención a cada detalle que influye en cómo las personas interactúan con la tecnología."
+      },
+      {
+        "id": 2,
+        "text": "Impulsada por la curiosidad y un compromiso con el aprendizaje continuo, me encanta explorar nuevas herramientas y frameworks para mantenerme al día en el desarrollo frontend. Ya sea colaborando en equipo o trabajando de forma independiente, valoro la comunicación clara, el diseño cuidadoso y la creación de productos que sean tanto bellos como eficaces."
+      }
+    ],
+    "button": {
+      "text": "Descargar CV",
+      "icon": "download",
+      "file": "/Curriculum-Maria-Teresa-2025.pdf"
+    }
+  },
+  "skillsSection": {
+    "title": "Habilidades",
+    "image": {
+      "url": "/img/skills.svg",
+      "alt": "Ilustración de habilidades"
+    },
+    "skills": [
+      { "id": 1, "text": "JavaScript", "icon": "javascript" },
+      { "id": 2, "text": "TypeScript", "icon": "typescript" },
+      { "id": 3, "text": "Vue.js", "icon": "vue" },
+      { "id": 4, "text": "Nuxt.js", "icon": "nuxt" },
+      { "id": 5, "text": "HTML5", "icon": "html" },
+      { "id": 6, "text": "CSS3", "icon": "css" },
+      { "id": 7, "text": "SASS", "icon": "sass" },
+      { "id": 8, "text": "Git", "icon": "git" }
+    ]
+  },
+  "timelineSection": {
+    "title": "Línea de tiempo",
+    "items": [
+      {
+        "id": 1,
+        "date": "2021 - 2023",
+        "title": "Formación académica",
+        "description": "Terminé el bachillerato con enfoque tecnológico, donde descubrí mi pasión por el desarrollo y la programación.",
+        "icon": "i-lucide-rocket"
+      },
+      {
+        "id": 2,
+        "date": "2023 - 2025",
+        "title": "Desarrollo Web (FP DAW)",
+        "description": "Cursé un ciclo formativo de Desarrollo de Aplicaciones Web, adquiriendo sólidos conocimientos en programación, bases de datos y diseño web.",
+        "icon": "i-lucide-palette"
+      },
+      {
+        "id": 3,
+        "date": "21 Mar 2025 - 9 Jun 2025",
+        "title": "Prácticas",
+        "description": "Pasé 3 meses en Alebat Education, participando en proyectos reales y fortaleciendo mis habilidades en un entorno profesional.",
+        "icon": "i-lucide-code"
+      },
+      {
+        "id": 4,
+        "date": "Hoy",
+        "title": "Proyectos personales",
+        "description": "Actualmente estoy trabajando en proyectos personales para seguir aprendiendo, explorar nuevas tecnologías y construir un portafolio sólido.",
+        "icon": "i-lucide-check-circle"
+      }
+    ]
+  }
+}
