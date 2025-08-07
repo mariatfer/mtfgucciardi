@@ -8,5 +8,8 @@ export interface NavbarLink {
 
 export interface Navbar {
   links: NavbarLink[];
-  icons: Icon[];
+  icons: {
+    ariaLabel: string;
+    items: Icon[];
+  };
 }
