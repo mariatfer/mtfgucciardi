@@ -12,26 +12,32 @@ const isActive = (path: string) => {
 </script>
 
 <template>
-  <ul class="navbar-links">
-    <li v-for="link in links" :key="link.id">
-      <NuxtLinkLocale
-        :to="link.route"
-        :class="[
-          'navbar-links__item',
-          { 'navbar-links__item--active': isActive(link.route) },
-        ]"
-      >
-        {{ link.text }}
-      </NuxtLinkLocale>
-    </li>
-  </ul>
+  <nav class="navbar-links">
+    <ul class="navbar-links__list">
+      <li v-for="link in links" :key="link.id">
+        <NuxtLinkLocale
+          :to="link.route"
+          :class="[
+            'navbar-links__item',
+            { 'navbar-links__item--active': isActive(link.route) },
+          ]"
+        >
+          {{ link.text }}
+        </NuxtLinkLocale>
+      </li>
+    </ul>
+  </nav>
 </template>
 
 <style lang="scss" scoped>
 .navbar-links {
-  @include flex(row, center, space-between, $gap: 3rem);
   @include responsive {
     display: none;
+  }
+
+  &__list {
+    @include flex(row, center, space-between, $gap: 3rem);
+    width: 100%;
   }
 
   &__item {

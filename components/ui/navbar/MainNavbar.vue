@@ -6,12 +6,12 @@ const { showModal, useOpenModal, useCloseModal } = useModal();
 </script>
 
 <template>
-  <div class="navbar">
+  <header class="navbar">
     <UiNavbarDesktop v-if="data?.links" :links="data.links" />
     <UiNavbarHamburger :active="showModal" @toggle="useOpenModal" />
-    <ul class="navbar__social">
+    <ul class="navbar__social" :aria-label="data?.icons.ariaLabel">
       <UiButtonLanguageButton />
-      <li v-for="icon in data?.icons" :key="icon.id">
+      <li v-for="icon in data?.icons.items" :key="icon.id">
         <NuxtLink
           target="_blank"
           :href="icon.href"
@@ -21,22 +21,24 @@ const { showModal, useOpenModal, useCloseModal } = useModal();
         /></NuxtLink>
       </li>
     </ul>
-  </div>
+  </header>
   <UiTheModal
     :show-modal="showModal"
     background-color="var(--c-graphite)"
     @close="useCloseModal"
   >
-    <ul v-if="data?.links" class="hamburguer-links">
-      <li v-for="link in data.links" :key="link.id">
-        <NuxtLinkLocale
-          :to="link.route"
-          class="hamburguer-links__item"
-          @click="useCloseModal"
-          >{{ link.text }}
-        </NuxtLinkLocale>
-      </li>
-    </ul>
+    <nav>
+      <ul v-if="data?.links" class="hamburguer-links">
+        <li v-for="link in data.links" :key="link.id">
+          <NuxtLinkLocale
+            :to="link.route"
+            class="hamburguer-links__item"
+            @click="useCloseModal"
+            >{{ link.text }}
+          </NuxtLinkLocale>
+        </li>
+      </ul>
+    </nav>
   </UiTheModal>
 </template>
 
@@ -46,6 +48,7 @@ const { showModal, useOpenModal, useCloseModal } = useModal();
   padding: 1.5rem var(--s-padding);
   background-color: var(--c-aquamarine);
   max-height: 5rem;
+  max-width: 120rem;
   position: fixed;
   top: 0;
   width: 100%;

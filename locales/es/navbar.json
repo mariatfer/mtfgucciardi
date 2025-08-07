@@ -5,18 +5,21 @@
     { "id": 3, "text": "Proyectos", "route": "/proyectos" },
     { "id": 4, "text": "Contacto", "route": "/contacto" }
   ],
-  "icons": [
-    {
-      "id": 1,
-      "name": "linkedin",
-      "href": "https://www.linkedin.com/in/maria-teresa-fernandez-gucciardi",
-      "title": "Linkedin"
-    },
-    {
-      "id": 2,
-      "name": "github",
-      "href": "https://github.com/mariatfer",
-      "title": "Github"
-    }
-  ]
+  "icons": {
+    "ariaLabel": "Enlaces a redes sociales",
+    "items": [
+      {
+        "id": 1,
+        "name": "linkedin",
+        "href": "https://www.linkedin.com/in/maria-teresa-fernandez-gucciardi",
+        "title": "Linkedin"
+      },
+      {
+        "id": 2,
+        "name": "github",
+        "href": "https://github.com/mariatfer",
+        "title": "Github"
+      }
+    ]
+  }
 }
