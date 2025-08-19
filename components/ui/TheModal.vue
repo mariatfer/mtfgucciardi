@@ -1,21 +1,18 @@
 <script setup lang="ts">
-const props = defineProps<{
+import { ICONS } from "@/constants/icons";
+
+defineProps<{
   showModal: boolean;
-  backgroundColor?: string;
 }>();
 
 defineEmits(["close"]);
-
-const styles = computed(() => ({
-  "--background-color": props.backgroundColor ?? "var(--c-black)",
-}));
 </script>
 
 <template>
   <Transition name="modal-slide" appear>
-    <dialog v-if="showModal" :style="styles" class="modal">
+    <dialog v-if="showModal" class="modal">
       <button class="close-button" @click="$emit('close')">
-        <icon name="ix:close" />
+        <icon :name="ICONS.close" />
       </button>
       <slot />
     </dialog>
@@ -36,7 +33,6 @@ const styles = computed(() => ({
 }
 
 .close-button {
-  color: var(--c-static-white);
   position: absolute;
   z-index: 2;
   top: 2em;

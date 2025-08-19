@@ -19,15 +19,15 @@ const styles = computed(() => ({
 </script>
 
 <template>
-  <header class="left-header" :style="styles">
-    <h2 class="left-header__title">
+  <header class="header" :style="styles">
+    <h2 class="header__title">
       <slot />
     </h2>
   </header>
 </template>
 
 <style scoped lang="scss">
-.left-header {
+header {
   &__title {
     text-align: var(--text-align);
     color: var(--text-color);

@@ -25,10 +25,10 @@ const props = defineProps<Props>();
 const styles = computed(() => ({
   "--padding": props.padding || "0 1rem",
   "--width": props.width || "auto",
-  "--font-family": props.fontFamily || "Fira Sans",
+  "--font-family": props.fontFamily || "var(--f-font-regular)",
   "--font-size": props.fontSize || "1rem",
-  "--color": props.color || "var(--c-static-black)",
-  "--hover-color": props.hoverColor || "var(--c-white)",
+  "--color": props.color || "var(--c-white)",
+  "--hover-color": props.hoverColor || "var(--c-primary)",
   "--bg-color": props.bgColor || "var(--c-dark-yellow)",
   "--bg-hover": props.bgHover || "transparent",
   "--height": props.height ? `${props.height}` : "3em",
