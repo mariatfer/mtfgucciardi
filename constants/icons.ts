@@ -15,4 +15,5 @@ export const ICONS = {
   gmail: "skill-icons:gmail-light",
   spain: "circle-flags:lang-es",
   england: "circle-flags:en",
+  close: "ix:close",
 };

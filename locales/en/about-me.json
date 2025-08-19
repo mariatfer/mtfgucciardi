@@ -14,7 +14,7 @@
     "button": {
       "text": "Download CV",
       "icon": "download",
-      "file": "/Curriculum-Maria-Teresa-2025.pdf"
+      "file": "/Curriculum_Maria_Fernandez_2025.pdf"
     }
   },
   "skillsSection": {
@@ -41,7 +41,7 @@
         "id": 1,
         "date": "2021 - 2023",
         "title": "Academic Foundation",
-        "description": "I completed high school with a focus on technology, where I discovered my passion for development and programming.",
+        "description": "I studied Social Sciences in high school, which gave me a strong foundation in critical thinking and understanding the world around me. Over time, I discovered my passion for technology and programming, and chose to pursue a career in web development.",
         "icon": "i-lucide-rocket"
       },
       {

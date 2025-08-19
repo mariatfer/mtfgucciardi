@@ -14,7 +14,7 @@
     "button": {
       "text": "Descargar CV",
       "icon": "download",
-      "file": "/Curriculum-Maria-Teresa-2025.pdf"
+      "file": "/Curriculum_Maria_Fernandez_2025.pdf"
     }
   },
   "skillsSection": {
@@ -41,7 +41,7 @@
         "id": 1,
         "date": "2021 - 2023",
         "title": "Formación académica",
-        "description": "Terminé el bachillerato con enfoque tecnológico, donde descubrí mi pasión por el desarrollo y la programación.",
+        "description": "Estudié el bachillerato de Ciencias Sociales, lo que me dio una base sólida en pensamiento crítico y comprensión del entorno. Con el tiempo, descubrí mi pasión por la tecnología y la programación, y decidí orientar mi carrera hacia el desarrollo web.",
         "icon": "i-lucide-rocket"
       },
       {
