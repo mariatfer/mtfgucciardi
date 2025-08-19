@@ -27,7 +27,7 @@ const styles = computed(() => ({
 </template>
 
 <style scoped lang="scss">
-header {
+.header {
   &__title {
     text-align: var(--text-align);
     color: var(--text-color);
