@@ -45,8 +45,8 @@ Welcome to my personal portfolio! This project showcases my work, skills, and pa
 ```bash
 # npm
 
-git clone https://github.com/mariatfer/portfolio.git
-cd portfolio
+git clone https://github.com/mariatfer/mtfgucciardi.git
+cd mtfgucciardi
 npm install
 npm run dev
 ```
