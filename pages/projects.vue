@@ -37,6 +37,10 @@ const textAlign = computed(() =>
 
 <style lang="scss">
 .projects {
+  padding: 0 0 var(--s-padding) 0;
+  @include responsive {
+    padding: 0 0 var(--s-padding-mobile) 0;
+  }
   &__title {
     margin: var(--s-margin) 0 0 0;
     padding: 0 var(--s-padding);
@@ -53,6 +57,7 @@ const textAlign = computed(() =>
     @include responsive {
       margin: 1rem 0 0 0;
       padding: 0 var(--s-padding-mobile);
+      text-align: center;
     }
   }
 
