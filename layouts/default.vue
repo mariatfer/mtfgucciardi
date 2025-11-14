@@ -1,6 +1,13 @@
 <script lang="ts" setup>
 const overlay = ref<HTMLElement | null>(null);
 provide("overlayRef", overlay);
+const languageStore = useLanguageStore();
+const { language } = storeToRefs(languageStore);
+useHead({
+  htmlAttrs: {
+    lang: language,
+  },
+});
 </script>
 
 <template>
