@@ -2,7 +2,7 @@
 import { useLanguageStore } from "@/stores/language";
 import { storeToRefs } from "pinia";
 import { gsap } from "gsap";
-import { useI18n } from "vue-i18n"; // 👈 Aquí importas la función
+import { useI18n } from "vue-i18n";
 
 const languageStore = useLanguageStore();
 const { currentLanguageInfo, isReady } = storeToRefs(languageStore);

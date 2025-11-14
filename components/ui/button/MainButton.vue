@@ -89,21 +89,22 @@ const isAnchor = computed(() => {
   height: var(--height);
   letter-spacing: 0.0893rem;
   text-transform: uppercase;
+  will-change: transform;
   cursor: pointer;
   @include flex(row, center, center, $gap: 0.5em);
   &:hover {
     animation: pulse 0.5s infinite alternate;
-    letter-spacing: 0.15rem;
+    letter-spacing: 0.125rem;
     background: linear-gradient(
       130deg,
       var(--c-medium-yellow),
       var(--c-dark-yellow)
     );
-    color: #fff;
+    color: var(--c-white);
   }
   @keyframes pulse {
     to {
-      transform: scale(1.03);
+      transform: scale(1.015);
     }
   }
   &:disabled {
@@ -122,7 +123,6 @@ const isAnchor = computed(() => {
   }
   @include responsive() {
     font-size: var(--s-font-cta);
-    height: var(--height);
   }
 }
 </style>

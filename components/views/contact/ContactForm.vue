@@ -90,7 +90,7 @@ const sendMessage = async () => {
       />
     </UiScrollReveal>
     <UiScrollReveal class="contact-form__grid-item--button">
-      <UiMainButton width="100%">{{ $props.button }}</UiMainButton>
+      <UiButtonMainButton width="100%">{{ $props.button }}</UiButtonMainButton>
     </UiScrollReveal>
   </form>
 </template>
