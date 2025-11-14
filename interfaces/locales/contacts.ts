@@ -1,4 +1,5 @@
 import type { FormData } from "@/interfaces/forms";
+import type { SEO } from "@/interfaces/common";
 
 export interface InfoContact {
   title: string;
@@ -28,4 +29,5 @@ export interface ContactForm {
 export interface Contact {
   infoContact: InfoContact;
   contactForm: ContactForm;
+  seo: SEO;
 }

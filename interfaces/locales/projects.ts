@@ -1,4 +1,4 @@
-import type { Image, Icon } from "@/interfaces/common";
+import type { Image, Icon, SEO } from "@/interfaces/common";
 
 export interface ProjectCard {
   id: number;
@@ -19,4 +19,5 @@ export interface Projects {
   title: string;
   paragraph: string;
   projectCards: ProjectCard[];
+  seo: SEO;
 }
