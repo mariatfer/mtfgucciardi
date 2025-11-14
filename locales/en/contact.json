@@ -61,5 +61,18 @@
       }
     ],
     "button": "Send"
+  },
+  "seo": {
+    "metaTitle": "Contact | María T. Fernández - Frontend Developer",
+    "metaDescription": "Get in touch to collaborate on web development, accessibility, and frontend design projects.",
+    "noIndex": false,
+    "noFollow": false,
+    "ogTitle": "Contact | María T. Fernández - Frontend Developer",
+    "ogDescription": "Want to talk about projects or collaborations? Send me a message and I’ll be happy to reply.",
+    "author": "María T. Fernández",
+    "publisher": "María T. Fernández",
+    "canonicalUrl": "https://mtfgucciardi.com/en/contact",
+    "ogImage": "/img/portfolio.png",
+    "ogImageAlt": "Icon of portfolio"
   }
 }

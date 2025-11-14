@@ -1,9 +1,21 @@
 {
   "title": "Hi. I'm María",
-  "description":
-    "I'm a Frontend Developer passionate about crafting performant, accessible, and visually engaging web interfaces with modern technologies.",
+  "description": "I'm a Frontend Developer passionate about crafting performant, accessible, and visually engaging web interfaces with modern technologies.",
   "image": {
     "url": "/img/character.svg",
     "alt": "Character Illustration"
+  },
+  "seo": {
+    "metaTitle": "Portfolio | María T. Fernández - Frontend Developer",
+    "metaDescription": "Explore my projects as a frontend developer specialized in Vue.js. I design accessible, creative interfaces focused on user experience.",
+    "noIndex": false,
+    "noFollow": false,
+    "ogTitle": "Portfolio | María T. Fernández - Frontend Developer",
+    "ogDescription": "Discover my web projects, from AI-powered apps to inclusive interfaces. My goal is to create digital experiences that are engaging, accessible, and visually appealing.",
+    "author": "María T. Fernández",
+    "publisher": "María T. Fernández",
+    "canonicalUrl": "https://mtfgucciardi.com/en/",
+    "ogImage": "/img/portfolio.png",
+    "ogImageAlt": "Icon of portfolio"
   }
 }

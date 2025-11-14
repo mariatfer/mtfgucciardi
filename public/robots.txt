@@ -1,2 +1,5 @@
 User-Agent: *
-Disallow:
+Disallow: /gracias
+Disallow: /en/thank-you
+
+Sitemap: https://mtfgucciardi.com/sitemap.xml

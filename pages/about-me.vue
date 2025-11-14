@@ -1,26 +1,35 @@
 <script setup lang="ts">
 import type { AboutMe } from "@/interfaces/locales/about";
-const { data } = useLocales<AboutMe>("about-me");
+const { data: aboutLocales } = useLocales<AboutMe>("about-me");
+watchEffect(() => {
+  if (aboutLocales.value?.seo) {
+    usePageSeo(aboutLocales.value.seo);
+  }
+});
 </script>
 
 <template>
   <div class="about">
+    <UiSEOTitle
+      v-if="aboutLocales?.seo"
+      :meta-title="aboutLocales.seo.metaTitle"
+    />
     <article class="about__profile">
       <ViewsAboutProfileCard
-        v-if="data?.profileCard"
-        v-bind="data.profileCard"
+        v-if="aboutLocales?.profileCard"
+        v-bind="aboutLocales.profileCard"
       />
     </article>
     <article class="about__skills">
       <ViewsAboutSkillsSection
-        v-if="data?.skillsSection"
-        v-bind="data.skillsSection"
+        v-if="aboutLocales?.skillsSection"
+        v-bind="aboutLocales.skillsSection"
       />
     </article>
     <article class="about__timeline">
       <ViewsAboutTimelineSection
-        v-if="data?.timelineSection"
-        v-bind="data.timelineSection"
+        v-if="aboutLocales?.timelineSection"
+        v-bind="aboutLocales.timelineSection"
       />
     </article>
   </div>

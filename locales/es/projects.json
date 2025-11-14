@@ -4,23 +4,23 @@
   "projectCards": [
     {
       "id": 1,
-      "title": "AFR Design & Printing",
+      "title": "Con lo que hay",
       "image": {
-        "url": "/img/afrimpresiones.png",
-        "alt": "Mockup de una tienda en línea para productos personalizados"
+        "url": "/img/conloquehay.png",
+        "alt": "Mockup de una aplicación web que sugiere recetas con IA"
       },
       "description": [
         {
           "id": 1,
-          "text": "AFR Impresiones es una plataforma de comercio electrónico diseñada para brindar una experiencia eficiente tanto a los clientes como a los administradores."
+          "text": "Con lo que hay es una aplicación web que genera recetas personalizadas con inteligencia artificial, a partir de los ingredientes disponibles en casa."
         },
         {
           "id": 2,
-          "text": "La aplicación permite a los usuarios registrarse y gestionar su perfil con datos actualizables como nombre, correo electrónico, teléfono y dirección, asegurando una sesión segura y personalizada."
+          "text": "La aplicación permite a los usuarios seleccionar sus alergias y los alimentos que quieren incluir, lo que garantiza una experiencia rápida y accesible."
         },
         {
           "id": 3,
-          "text": "El proceso de pedido, aunque no incluye una pasarela de pago ni un formulario para completar la compra, permite que los pedidos se almacenen en la base de datos, los cuales los usuarios pueden consultar directamente desde su perfil. Esto permite un seguimiento organizado y eficiente de las compras realizadas."
+          "text": "Además, cuenta con un campo de texto libre donde se pueden añadir indicaciones o preferencias, permitiendo que la IA proponga combinaciones creativas y adaptadas a cada necesidad."
         }
       ],
       "technologies": {
@@ -28,41 +28,36 @@
         "icons": [
           {
             "id": 1,
-            "name": "html",
-            "title": "HTML5"
+            "name": "nuxt",
+            "title": "Nuxt"
           },
           {
             "id": 2,
-            "name": "css",
-            "title": "CSS"
+            "name": "vue",
+            "title": "Vue"
           },
           {
             "id": 3,
-            "name": "javascript",
-            "title": "JavaScript"
+            "name": "typescript",
+            "title": "TypeScript"
           },
           {
             "id": 4,
-            "name": "php",
-            "title": "PHP"
-          },
-          {
-            "id": 5,
-            "name": "mysql",
-            "title": "MySQL"
+            "name": "sass",
+            "title": "SCSS"
           }
         ]
       },
       "button": {
         "text": "Ver proyecto",
-        "link": "https://afrimpresiones.com/"
+        "link": "https://con-lo-que-hay.vercel.app/"
       }
     },
     {
       "id": 2,
       "title": "Vibe-Live",
       "image": {
-        "url": "/img/vibe-live.png",
+        "url": "/img/vibelive.png",
         "alt": "Mockup de un clon de Twitch"
       },
       "description": [
@@ -109,5 +104,18 @@
         "link": "https://vibe-live.vercel.app/"
       }
     }
-  ]
+  ],
+  "seo": {
+    "metaTitle": "Proyectos | María T. Fernández - Frontend Developer",
+    "metaDescription": "Explora mis proyectos de desarrollo web, desde aplicaciones con IA hasta portfolios accesibles y creativos.",
+    "noIndex": false,
+    "noFollow": false,
+    "ogTitle": "Proyectos | María T. Fernández - Frontend Developer",
+    "ogDescription": "Descubre cómo aplico Vue.js, accesibilidad y diseño inclusivo en mis proyectos frontend.",
+    "author": "María T. Fernández",
+    "publisher": "María T. Fernández",
+    "canonicalUrl": "https://mtfgucciardi.com/proyectos",
+    "ogImage": "/img/portfolio.png",
+    "ogImageAlt": "Icono de portafolio"
+  }
 }

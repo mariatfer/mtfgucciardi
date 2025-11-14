@@ -1,29 +1,38 @@
 <script setup lang="ts">
 import type { ThankYou } from "@/interfaces/locales/thank-you";
 
-const { data } = useLocales<ThankYou>("thank-you");
+const { data: thanksLocales } = useLocales<ThankYou>("thank-you");
 const { isResponsiveResolution } = useWindowsResize();
 
 const textAlign = computed(() =>
   isResponsiveResolution.value ? "center" : "left"
 );
+watchEffect(() => {
+  if (thanksLocales.value?.seo) {
+    usePageSeo(thanksLocales.value.seo);
+  }
+});
 </script>
 
 <template>
   <div class="thank-you">
+    <UiSEOTitle
+      v-if="thanksLocales?.seo"
+      :meta-title="thanksLocales.seo.metaTitle"
+    />
     <UiTheTitle
-      v-if="data?.title"
+      v-if="thanksLocales?.title"
       :text-align="textAlign"
       color="var(--c-primary)"
       :shadow="false"
       :uppercase="true"
       :bolder="true"
-      >{{ data.title }}</UiTheTitle
+      >{{ thanksLocales.title }}</UiTheTitle
     >
-    <section v-if="data" class="thank-you__message">
-      <h4>{{ data.subtitle }}</h4>
+    <section v-if="thanksLocales" class="thank-you__message">
+      <h3>{{ thanksLocales.subtitle }}</h3>
       <div class="line" />
-      <p v-for="paragraph in data.paragraphs" :key="paragraph.id">
+      <p v-for="paragraph in thanksLocales.paragraphs" :key="paragraph.id">
         <template v-for="part in paragraph.parts" :key="part">
           <span v-if="typeof part === 'string'">{{ part }}</span>
           <NuxtLink

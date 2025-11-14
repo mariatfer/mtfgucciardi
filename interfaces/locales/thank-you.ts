@@ -1,3 +1,5 @@
+import type { SEO } from "../common";
+
 type ParagraphPart =
   | string
   | {
@@ -14,4 +16,5 @@ export interface ThankYou {
   title: string;
   subtitle: string;
   paragraphs: Paragraph[];
+  seo: SEO;
 }

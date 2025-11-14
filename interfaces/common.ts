@@ -9,3 +9,18 @@ export interface Icon {
   href?: string;
   title?: string;
 }
+
+export interface SEO {
+  metaTitle: string;
+  metaDescription: string;
+  noIndex: boolean;
+  noFollow: boolean;
+  ogTitle: string;
+  ogDescription: string;
+  author: string;
+  ogImage?: string;
+  ogImageAlt?: string;
+  ogUrl?: string;
+  publisher?: string;
+  canonicalUrl?: string;
+}

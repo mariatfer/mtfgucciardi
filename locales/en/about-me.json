@@ -66,5 +66,18 @@
         "icon": "i-lucide-check-circle"
       }
     ]
+  },
+  "seo": {
+    "metaTitle": "About Me | María T. Fernández - Frontend Developer",
+    "metaDescription": "I am a frontend developer specialized in Vue.js. Passionate about building accessible, creative interfaces focused on user experience.",
+    "noIndex": false,
+    "noFollow": false,
+    "ogTitle": "About Me | María T. Fernández - Frontend Developer",
+    "ogDescription": "Learn about my background, interests, and how I apply accessibility and inclusive design in my projects.",
+    "author": "María T. Fernández",
+    "publisher": "María T. Fernández",
+    "canonicalUrl": "https://mtfgucciardi.com/en/about-me",
+    "ogImage": "/img/portfolio.png",
+    "ogImageAlt": "Icon of portfolio"
   }
 }

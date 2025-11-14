@@ -61,5 +61,18 @@
       }
     ],
     "button": "Enviar"
+  },
+  "seo": {
+    "metaTitle": "Contacto | María T. Fernández - Frontend Developer",
+    "metaDescription": "Ponte en contacto conmigo para colaborar en proyectos de desarrollo web, accesibilidad y diseño frontend.",
+    "noIndex": false,
+    "noFollow": false,
+    "ogTitle": "Contacto | María T. Fernández - Frontend Developer",
+    "ogDescription": "¿Quieres hablar sobre proyectos o colaboraciones? Escríbeme y estaré encantada de responder.",
+    "author": "María T. Fernández",
+    "publisher": "María T. Fernández",
+    "canonicalUrl": "https://mtfgucciardi.com/contacto",
+    "ogImage": "/img/portfolio.png",
+    "ogImageAlt": "Icono de portafolio"
   }
 }

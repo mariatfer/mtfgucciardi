@@ -1,4 +1,4 @@
-import type { Image } from "@/interfaces/common";
+import type { Image, SEO } from "@/interfaces/common";
 
 export interface ProfileCard {
   title: string;
@@ -33,4 +33,5 @@ export interface AboutMe {
   profileCard: ProfileCard;
   skillsSection: SkillsSection;
   timelineSection: TimelineSection;
+  seo: SEO;
 }

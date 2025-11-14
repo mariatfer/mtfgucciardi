@@ -43,7 +43,9 @@ defineProps<{
       />
     </UiSlideInFromLeft>
 
-    <UiMainButton :link="card.button.link">{{ card.button.text }}</UiMainButton>
+    <UiButtonMainButton :link="card.button.link">
+      {{ card.button.text }}
+    </UiButtonMainButton>
   </article>
 </template>
 
