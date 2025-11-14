@@ -1,18 +1,31 @@
 <script setup lang="ts">
 import type { Home } from "@/interfaces/locales/home";
-const { data } = useLocales<Home>("home");
+const { data: homeLocales } = useLocales<Home>("home");
+watchEffect(() => {
+  if (homeLocales.value?.seo) {
+    usePageSeo(homeLocales.value.seo);
+  }
+});
 </script>
 
 <template>
-  <div v-if="data" class="home">
+  <div v-if="homeLocales" class="home">
+    <UiSEOTitle
+      v-if="homeLocales?.seo"
+      :meta-title="homeLocales.seo.metaTitle"
+    />
     <section class="home__presentation">
-      <UiTheTitle>{{ data.title }}</UiTheTitle>
+      <UiTheTitle>{{ homeLocales.title }}</UiTheTitle>
       <p class="home__description">
-        {{ data.description }}
+        {{ homeLocales.description }}
       </p>
     </section>
     <section class="home__character">
-      <img :src="data.image.url" :alt="data.image.alt" class="home__image" />
+      <img
+        :src="homeLocales.image.url"
+        :alt="homeLocales.image.alt"
+        class="home__image"
+      />
     </section>
   </div>
 </template>
@@ -40,7 +53,7 @@ const { data } = useLocales<Home>("home");
   &__description {
     text-align: center;
     margin: 1rem 0 0 0;
-    text-shadow: .25rem .1875rem 0.2rem rgba(0, 0, 0, 0.582);
+    text-shadow: 0.25rem 0.1875rem 0.2rem rgba(0, 0, 0, 0.582);
     @include responsive {
       margin: 0;
     }

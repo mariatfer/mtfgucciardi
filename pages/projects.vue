@@ -1,31 +1,40 @@
 <script setup lang="ts">
 import type { Projects } from "@/interfaces/locales/projects";
-const { data } = useLocales<Projects>("projects");
+const { data: projectsLocales } = useLocales<Projects>("projects");
 const { isResponsiveResolution } = useWindowsResize();
 
 const textAlign = computed(() =>
   isResponsiveResolution.value ? "center" : "left"
 );
+watchEffect(() => {
+  if (projectsLocales.value?.seo) {
+    usePageSeo(projectsLocales.value.seo);
+  }
+});
 </script>
 
 <template>
   <div class="projects">
+    <UiSEOTitle
+      v-if="projectsLocales?.seo"
+      :meta-title="projectsLocales.seo.metaTitle"
+    />
     <UiTheTitle
-      v-if="data?.title"
+      v-if="projectsLocales?.title"
       :text-align="textAlign"
       color="var(--c-primary)"
       :shadow="false"
       :uppercase="true"
       :bolder="true"
       class="projects__title"
-      >{{ data.title }}</UiTheTitle
+      >{{ projectsLocales.title }}</UiTheTitle
     >
-    <p v-if="data?.paragraph" class="projects__paragraph">
-      {{ data.paragraph }}
+    <p v-if="projectsLocales?.paragraph" class="projects__paragraph">
+      {{ projectsLocales.paragraph }}
     </p>
-    <div v-if="data?.projectCards" class="projects__cards-section">
+    <div v-if="projectsLocales?.projectCards" class="projects__cards-section">
       <UiScrollReveal
-        v-for="card in data.projectCards"
+        v-for="card in projectsLocales.projectCards"
         :key="card.id"
         style="width: 100%"
       >
