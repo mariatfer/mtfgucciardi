@@ -20,5 +20,17 @@
       "id": 3,
       "parts": ["Thanks again, and have a great day!"]
     }
-  ]
+  ],
+  "seo": {
+    "metaTitle": "Thank You | María T. Fernández",
+    "metaDescription": "Your message has been successfully sent. Thank you for getting in touch.",
+    "noIndex": true,
+    "noFollow": false,
+    "ogTitle": "Thank You | María T. Fernández",
+    "ogDescription": "Confirmation page after submitting the contact form.",
+    "author": "María T. Fernández",
+    "publisher": "María T. Fernández",
+    "ogImage": "/img/portfolio.png",
+    "ogImageAlt": "Icon of portfolio"
+  }
 }

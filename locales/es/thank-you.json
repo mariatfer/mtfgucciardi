@@ -20,5 +20,17 @@
       "id": 3,
       "parts": ["¡Gracias de nuevo, y que tengas un excelente día!"]
     }
-  ]
+  ],
+  "seo": {
+    "metaTitle": "Gracias | María T. Fernández",
+    "metaDescription": "Tu mensaje ha sido enviado correctamente. Gracias por ponerte en contacto conmigo.",
+    "noIndex": true,
+    "noFollow": false,
+    "ogTitle": "Gracias | María T. Fernández",
+    "ogDescription": "Página de confirmación tras enviar el formulario de contacto.",
+    "author": "María T. Fernández",
+    "publisher": "María T. Fernández",
+    "ogImage": "/img/portfolio.png",
+    "ogImageAlt": "Icono de portafolio"
+  }
 }

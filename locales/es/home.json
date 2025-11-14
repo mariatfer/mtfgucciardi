@@ -4,5 +4,18 @@
   "image": {
     "url": "/img/character.svg",
     "alt": "Ilustración de una persona"
+  },
+  "seo": {
+    "metaTitle": "Portfolio | María T. Fernández - Frontend Developer",
+    "metaDescription": "Explora mis proyectos como desarrolladora frontend especializada en Vue.js. Diseño interfaces accesibles, creativas y enfocadas en la experiencia de usuario.",
+    "noIndex": false,
+    "noFollow": false,
+    "ogTitle": "Portfolio | María T. Fernández - Frontend Developer",
+    "ogDescription": "Descubre mis proyectos web, desde aplicaciones con IA hasta interfaces inclusivas. Mi objetivo es crear experiencias digitales cercanas, accesibles y visualmente atractivas.",
+    "author": "María T. Fernández",
+    "publisher": "María T. Fernández",
+    "canonicalUrl": "https://mtfgucciardi.com/",
+    "ogImage": "/img/portfolio.png",
+    "ogImageAlt": "Icono de portafolio"
   }
 }
