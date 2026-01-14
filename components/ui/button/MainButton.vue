@@ -2,19 +2,10 @@
 import { RouterLink } from "#vue-router";
 
 interface Props {
-  bgColor?: string;
-  bgHover?: string;
-  color?: string;
-  fontFamily?: string;
-  fontSize?: string;
-  hoverColor?: string;
   link?: string;
   padding?: string;
   to?: string;
   width?: number | string;
-  height?: number | string;
-  border?: string;
-  borderRadius?: string;
   target?: string;
   rel?: string;
   download?: string | boolean;
@@ -23,22 +14,7 @@ interface Props {
 const props = defineProps<Props>();
 
 const styles = computed(() => ({
-  "--padding": props.padding || "0 1rem",
   "--width": props.width || "auto",
-  "--font-family": props.fontFamily || "var(--f-font-regular)",
-  "--font-size": props.fontSize || "1rem",
-  "--color": props.color || "var(--c-white)",
-  "--hover-color": props.hoverColor || "var(--c-primary)",
-  "--bg-color": props.bgColor || "var(--c-dark-yellow)",
-  "--bg-hover": props.bgHover || "transparent",
-  "--height": props.height ? `${props.height}` : "3em",
-  "--border-radius": props.borderRadius || "0.25em",
-  "--border":
-    props.border === undefined
-      ? `0.125em solid var(--c-primary)`
-      : props.border !== "none"
-        ? `0.125em solid ${props.border}`
-        : props.border,
 }));
 
 const ANCHOR = "a";
@@ -78,34 +54,29 @@ const isAnchor = computed(() => {
 <style lang="scss" scoped>
 .main-button {
   width: var(--width);
-  color: var(--color);
-  font-family: var(--font-family);
-  font-size: var(--font-size);
-  background-color: var(--bg-color);
-  border-radius: var(--border-radius);
-  border: var(--border);
-  padding: var(--padding);
+  color: var(--c-white);
+  background-color: var(--c-medium-yellow);
+  border-radius: 0.625rem;
+  border: 2px dashed var(--c-medium-yellow);
+  padding: 0.8rem;
   transition: var(--t-transition-button);
-  height: var(--height);
-  letter-spacing: 0.0893rem;
+  letter-spacing: 0.125rem;
   text-transform: uppercase;
   will-change: transform;
-  cursor: pointer;
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0 0.125rem 0.3125rem -0.0625rem,
+    rgba(0, 0, 0, 0.3) 0 0.0625rem 0.1875rem -0.0625rem;
+
   @include flex(row, center, center, $gap: 0.5em);
-  &:hover {
-    animation: pulse 0.5s infinite alternate;
-    letter-spacing: 0.125rem;
-    background: linear-gradient(
-      130deg,
-      var(--c-medium-yellow),
-      var(--c-dark-yellow)
-    );
-    color: var(--c-white);
+
+  & span:last-child {
+    display: none;
   }
-  @keyframes pulse {
-    to {
-      transform: scale(1.015);
-    }
+
+  &:hover {
+    transition: 0.4s;
+    border: 2px dashed var(--c-medium-yellow);
+    background-color: var(--c-dark-yellow);
   }
   &:disabled {
     position: relative;
