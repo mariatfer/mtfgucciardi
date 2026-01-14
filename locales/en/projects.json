@@ -103,6 +103,57 @@
         "text": "View project",
         "link": "https://vibe-live.vercel.app/"
       }
+    },
+    {
+      "id": 2,
+      "title": "HandDraw",
+      "image": {
+        "url": "/img/handdraw.png",
+        "alt": "Mockup of a web application for drawing with hand gestures"
+      },
+      "description": [
+        {
+          "id": 1,
+          "text": "HandDraw is an interactive web application created with Nuxt.js, Vue.js, and TypeScript that allows you to draw on a digital canvas using only hand gestures detected by the camera."
+        },
+        {
+          "id": 2,
+          "text": "The system uses MediaPipe for real-time hand tracking, interpreting positions and gestures to draw, change colours, erase or clear the canvas without the need for a mouse."
+        },
+        {
+          "id": 3,
+          "text": "The application is deployed on Vercel and designed to adapt to any device, offering an intuitive and accessible experience where users can draw with gestures without the need for additional hardware."
+        }
+      ],
+      "technologies": {
+        "title": "Technologies used",
+        "icons": [
+          {
+            "id": 1,
+            "name": "nuxt",
+            "title": "Nuxt"
+          },
+          {
+            "id": 2,
+            "name": "vue",
+            "title": "Vue"
+          },
+          {
+            "id": 3,
+            "name": "typescript",
+            "title": "TypeScript"
+          },
+          {
+            "id": 4,
+            "name": "sass",
+            "title": "SCSS"
+          }
+        ]
+      },
+      "button": {
+        "text": "View project",
+        "link": "https://handdraw.vercel.app/"
+      }
     }
   ],
   "seo": {
