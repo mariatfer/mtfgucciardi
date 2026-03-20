@@ -15,6 +15,8 @@ export default defineEventHandler(async (event) => {
       subject: "Nuevo mensaje de tu portfolio",
       html: `
       <p><strong>Email:</strong> ${body.email}</p>
+      <p><strong>Nombre:</strong> ${body.name}</p>
+      <p><strong>Apellidos:</strong> ${body.lastName}</p>
       <p><strong>Mensaje:</strong></p>
       <p>${body.message}</p>
     `,
