@@ -45,6 +45,8 @@ const sendMessage = async () => {
       method: "POST",
       body: {
         email: formData.email,
+        name: formData.name,
+        lastName: formData.lastName,
         message: formData.message,
       },
     });
