@@ -19,6 +19,15 @@ export default defineNuxtConfig({
     "@nuxtjs/i18n",
   ],
   ssr: false,
+  app: {
+    head: {
+      script: [
+        ...(process.env.NODE_ENV === "production"
+          ? [{ src: "/_vercel/insights/script.js", defer: true }]
+          : []),
+      ],
+    },
+  },
   css: [
     "@/assets/styles/fonts.css",
     "@/assets/styles/vueTransitions.css",
