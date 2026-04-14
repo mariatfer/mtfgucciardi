@@ -55,9 +55,9 @@ watchEffect(async () => {
         opacity: 0,
         y: 10,
         stagger: 0.03,
-        duration: 0.5,
+        duration: 0.3,
         ease: "power2.out",
-        delay: 0.2,
+        delay: 0.1,
       });
     },
   });
