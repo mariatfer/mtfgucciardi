@@ -4,4 +4,5 @@
       <NuxtPage :key="$route.fullPath" />
     </UiPageTransition>
   </NuxtLayout>
+  <UiCursorParticles />
 </template>

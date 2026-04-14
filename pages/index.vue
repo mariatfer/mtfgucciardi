@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { Home } from "@/interfaces/locales/home";
+
 const { data: homeLocales } = useLocales<Home>("home");
 watchEffect(() => {
   if (homeLocales.value?.seo) {
@@ -15,7 +16,7 @@ watchEffect(() => {
       :meta-title="homeLocales.seo.metaTitle"
     />
     <section class="home__presentation">
-      <UiTheTitle>{{ homeLocales.title }}</UiTheTitle>
+      <UiTheTitle animate class="split">{{ homeLocales.title }}</UiTheTitle>
       <p class="home__description">
         {{ homeLocales.description }}
       </p>
