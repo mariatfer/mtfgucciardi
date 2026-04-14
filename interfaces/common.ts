@@ -24,3 +24,12 @@ export interface SEO {
   publisher?: string;
   canonicalUrl?: string;
 }
+
+export interface Particle {
+  x: number;
+  y: number;
+  size: number;
+  speedX: number;
+  speedY: number;
+  life: number;
+}
