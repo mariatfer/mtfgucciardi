@@ -30,7 +30,7 @@ const width = computed(() =>
     <UiButtonMainButton
       :link="$props.button.file"
       :width="width"
-      download="Maria_Teresa_Fernandez_CV_2026"
+      download="Maria_Teresa_Fernandez_CV"
       >{{ $props.button.text }}<icon :name="resolveIcon($props.button.icon)"
     /></UiButtonMainButton>
   </section>
