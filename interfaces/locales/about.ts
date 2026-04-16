@@ -1,8 +1,9 @@
-import type { Image, SEO } from "@/interfaces/common";
+import type { Icon, Image, SEO, TextItem } from "@/interfaces/common";
+import type { TimelineItem } from "@nuxt/ui";
 
 export interface ProfileCard {
   title: string;
-  description: Array<{ id: number; text: string }>;
+  description: TextItem[];
   button: {
     text: string;
     icon: string;
@@ -10,20 +11,17 @@ export interface ProfileCard {
   };
 }
 
+export interface SkillCategory {
+  id: number
+  title: string
+  items: Icon[]
+}
+
 export interface SkillsSection {
-  title: string;
-  image: Image;
-  skills: Array<{ id: number; text: string; icon: string }>;
+  title: string
+  image: Image
+  skills: SkillCategory[]
 }
-
-export interface TimelineItem {
-  id: number;
-  date: string;
-  title: string;
-  description: string;
-  icon: string;
-}
-
 export interface TimelineSection {
   title: string;
   items: TimelineItem[];

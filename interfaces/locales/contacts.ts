@@ -1,9 +1,9 @@
 import type { FormData } from "@/interfaces/forms";
-import type { SEO } from "@/interfaces/common";
+import type { SEO, TextItem } from "@/interfaces/common";
 
 export interface InfoContact {
   title: string;
-  description: Array<{ id: number; text: string }>;
+  description: TextItem[];
   email: {
     icon: string;
     text: string;
