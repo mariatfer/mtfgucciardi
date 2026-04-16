@@ -1,7 +1,9 @@
 <template>
   <NuxtLayout>
     <UiPageTransition>
-      <NuxtPage :key="$route.fullPath" />
+      <UApp>
+        <NuxtPage :key="$route.fullPath" />
+      </UApp>
     </UiPageTransition>
   </NuxtLayout>
   <UiCursorParticles />
