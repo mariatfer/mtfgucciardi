@@ -7,13 +7,10 @@ export default defineNuxtConfig({
     RESEND_API_KEY: process.env.RESEND_API_KEY || "",
   },
   modules: [
-    "@nuxt/content",
     "@nuxt/eslint",
     "@nuxt/fonts",
     "@nuxt/icon",
     "@nuxt/image",
-    "@nuxt/scripts",
-    "@nuxt/test-utils",
     "@nuxt/ui",
     "@pinia/nuxt",
     "@nuxtjs/i18n",
@@ -33,6 +30,7 @@ export default defineNuxtConfig({
     "@/assets/styles/vueTransitions.css",
     "@/assets/styles/variables.css",
     "@/assets/styles/reset.scss",
+    "@/assets/styles/main.css",
   ],
   vite: {
     css: {
@@ -41,6 +39,15 @@ export default defineNuxtConfig({
           additionalData: '@use "assets/styles/mixin.scss" as *;',
         },
       },
+    },
+    optimizeDeps: {
+      include: [
+        "@vue/devtools-core",
+        "@vue/devtools-kit",
+        "gsap",
+        "gsap/ScrollTrigger",
+        "gsap/SplitText",
+      ],
     },
   },
   plugins: ["@/plugins/init-language.client.ts"],
