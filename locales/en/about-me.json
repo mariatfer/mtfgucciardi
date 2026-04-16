@@ -24,46 +24,71 @@
       "alt": "Skills Illustration"
     },
     "skills": [
-      { "id": 1, "text": "JavaScript", "icon": "javascript" },
-      { "id": 2, "text": "TypeScript", "icon": "typescript" },
-      { "id": 3, "text": "Vue.js", "icon": "vue" },
-      { "id": 4, "text": "Nuxt.js", "icon": "nuxt" },
-      { "id": 5, "text": "HTML5", "icon": "html" },
-      { "id": 6, "text": "CSS3", "icon": "css" },
-      { "id": 7, "text": "SASS", "icon": "sass" },
-      { "id": 8, "text": "Git", "icon": "git" }
+      {
+        "id": 1,
+        "title": "Frontend Core",
+        "items": [
+          { "id": 1, "title": "JavaScript", "name": "javascript" },
+          { "id": 2, "title": "TypeScript", "name": "typescript" },
+          { "id": 6, "title": "HTML5", "name": "html" },
+          { "id": 7, "title": "CSS3", "name": "css" },
+          { "id": 8, "title": "SCSS", "name": "scss" }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Frameworks",
+        "items": [
+          { "id": 3, "title": "Vue.js", "name": "vue" },
+          { "id": 4, "title": "Nuxt.js", "name": "nuxt" },
+          { "id": 5, "title": "Bootstrap", "name": "bootstrap" }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Backend & CMS",
+        "items": [
+          { "id": 9, "title": "Strapi", "name": "strapi" },
+          { "id": 10, "title": "PHP", "name": "php" },
+          { "id": 11, "title": "Java", "name": "java" }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Tools",
+        "items": [
+          { "id": 12, "title": "Git", "name": "git" },
+          { "id": 13, "title": "GitHub", "name": "github" }
+        ]
+      }
     ]
   },
   "timelineSection": {
     "title": "Timeline",
     "items": [
       {
-        "id": 1,
         "date": "2021 - 2023",
         "title": "Academic Foundation",
-        "description": "I studied Social Sciences in high school, which gave me a strong foundation in critical thinking and understanding the world around me. Over time, I discovered my passion for technology and programming, and chose to pursue a career in web development.",
-        "icon": "i-lucide-rocket"
+        "description": "During my High School studies, I developed strong critical‑thinking skills and a solid understanding of social and cultural contexts. Over time, I discovered my passion for technology and programming, which led me to pursue a career in web development.",
+        "icon": "game-icons:graduate-cap"
       },
       {
-        "id": 2,
         "date": "2023 - 2025",
-        "title": "Web Development (FP DAW)",
-        "description": "I completed a vocational program in Web Application Development, gaining solid knowledge in programming, databases, and web design.",
-        "icon": "i-lucide-palette"
+        "title": "Higher Vocational Training in Web Application Development",
+        "description": "I completed a two‑year vocational program focused on Web Application Development, where I gained practical experience in programming, databases, web design, and modern development methodologies. This training strengthened my technical foundation and prepared me to build real‑world projects.",
+        "icon": "streamline-pixel:coding-apps-websites-programming-browser"
       },
       {
-        "id": 3,
-        "date": "Mar 21, 2025 - Jun 9, 2025",
+        "date": "Mar 2025 - Jun 2025",
         "title": "Internship",
-        "description": "I spent 3 months at Alebat Education, contributing to real-world projects and strengthening my skills in a professional environment.",
-        "icon": "i-lucide-code"
+        "description": "During my internship at Alebat Education, I worked as a Frontend Developer Intern contributing to production‑ready features using Vue 3, Nuxt 3, and TypeScript. I built scalable UI components with SCSS, implemented internationalization support, and collaborated within an Agile team. I also participated in code reviews, applying Clean Code principles to maintain clarity, consistency, and long‑term maintainability.",
+        "icon": "material-symbols:work"
       },
       {
-        "id": 4,
         "date": "Today",
         "title": "Personal Projects",
-        "description": "I'm currently working on personal projects to continue learning, explore new technologies, and build a strong portfolio.",
-        "icon": "i-lucide-check-circle"
+        "description": "I continue to grow through personal projects, exploring new technologies and expanding my portfolio. I’m motivated by continuous learning and by improving every day as a frontend developer.",
+        "icon": "material-symbols:code"
       }
     ]
   },

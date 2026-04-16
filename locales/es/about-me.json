@@ -24,46 +24,71 @@
       "alt": "Ilustración de habilidades"
     },
     "skills": [
-      { "id": 1, "text": "JavaScript", "icon": "javascript" },
-      { "id": 2, "text": "TypeScript", "icon": "typescript" },
-      { "id": 3, "text": "Vue.js", "icon": "vue" },
-      { "id": 4, "text": "Nuxt.js", "icon": "nuxt" },
-      { "id": 5, "text": "HTML5", "icon": "html" },
-      { "id": 6, "text": "CSS3", "icon": "css" },
-      { "id": 7, "text": "SASS", "icon": "sass" },
-      { "id": 8, "text": "Git", "icon": "git" }
+      {
+        "id": 1,
+        "title": "Frontend",
+        "items": [
+          { "id": 1, "title": "JavaScript", "name": "javascript" },
+          { "id": 2, "title": "TypeScript", "name": "typescript" },
+          { "id": 6, "title": "HTML5", "name": "html" },
+          { "id": 7, "title": "CSS3", "name": "css" },
+          { "id": 8, "title": "SCSS", "name": "scss" }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Frameworks",
+        "items": [
+          { "id": 3, "title": "Vue.js", "name": "vue" },
+          { "id": 4, "title": "Nuxt.js", "name": "nuxt" },
+          { "id": 5, "title": "Bootstrap", "name": "bootstrap" }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Backend y CMS",
+        "items": [
+          { "id": 9, "title": "Strapi", "name": "strapi" },
+          { "id": 10, "title": "PHP", "name": "php" },
+          { "id": 11, "title": "Java", "name": "java" }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Herramientas",
+        "items": [
+          { "id": 12, "title": "Git", "name": "git" },
+          { "id": 13, "title": "GitHub", "name": "github" }
+        ]
+      }
     ]
   },
   "timelineSection": {
     "title": "Línea de tiempo",
     "items": [
       {
-        "id": 1,
         "date": "2021 - 2023",
         "title": "Formación académica",
-        "description": "Estudié el bachillerato de Ciencias Sociales, lo que me dio una base sólida en pensamiento crítico y comprensión del entorno. Con el tiempo, descubrí mi pasión por la tecnología y la programación, y decidí orientar mi carrera hacia el desarrollo web.",
-        "icon": "i-lucide-rocket"
+        "description": "Durante el bachillerato de Ciencias Sociales desarrollé una base sólida en pensamiento crítico y comprensión del entorno. Con el tiempo descubrí mi interés por la tecnología y la programación, lo que me llevó a orientar mi futuro profesional hacia el desarrollo web.",
+        "icon": "game-icons:graduate-cap"
       },
       {
-        "id": 2,
         "date": "2023 - 2025",
-        "title": "Desarrollo Web (FP DAW)",
-        "description": "Cursé un ciclo formativo de Desarrollo de Aplicaciones Web, adquiriendo sólidos conocimientos en programación, bases de datos y diseño web.",
-        "icon": "i-lucide-palette"
+        "title": "Desarrollo de Aplicaciones Web (FP)",
+        "description": "Cursé el ciclo formativo de Desarrollo de Aplicaciones Web, donde adquirí conocimientos prácticos en programación, bases de datos, diseño web y metodologías de trabajo. Esta etapa consolidó mi vocación y me dio las herramientas para comenzar a construir proyectos reales.",
+        "icon": "streamline-pixel:coding-apps-websites-programming-browser"
       },
       {
-        "id": 3,
-        "date": "21 Mar 2025 - 9 Jun 2025",
-        "title": "Prácticas",
-        "description": "Pasé 3 meses en Alebat Education, participando en proyectos reales y fortaleciendo mis habilidades en un entorno profesional.",
-        "icon": "i-lucide-code"
+        "date": "Mar 2025 - Jun 2025",
+        "title": "Prácticas profesionales",
+        "description": "Durante mis prácticas en Alebat Education trabajé como Frontend Developer Intern, contribuyendo al desarrollo de funcionalidades reales con Vue 3, Nuxt 3 y TypeScript. Me enfoqué en crear componentes escalables con SCSS e integrar soporte de internacionalización. Formé parte de un equipo ágil, donde aprendí a trabajar con sprints, revisar pull requests y aplicar principios de Clean Code para mantener un código claro y sostenible.",
+        "icon": "material-symbols:work"
       },
       {
-        "id": 4,
         "date": "Hoy",
         "title": "Proyectos personales",
-        "description": "Actualmente estoy trabajando en proyectos personales para seguir aprendiendo, explorar nuevas tecnologías y construir un portafolio sólido.",
-        "icon": "i-lucide-check-circle"
+        "description": "Actualmente continúo formándome a través de proyectos personales, explorando nuevas tecnologías y ampliando mi portafolio. Me motiva seguir aprendiendo y evolucionando como desarrolladora frontend.",
+        "icon": "material-symbols:code"
       }
     ]
   },

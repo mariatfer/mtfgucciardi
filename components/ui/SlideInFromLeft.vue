@@ -7,7 +7,6 @@ const container = ref<HTMLElement | null>(null);
 async function waitForImages(el: HTMLElement) {
   const images = [...el.querySelectorAll("img")];
 
-  // Espera a que todas las imágenes estén cargadas (o falladas)
   await Promise.allSettled(
     images.map((img) =>
       img.complete
@@ -19,7 +18,6 @@ async function waitForImages(el: HTMLElement) {
     ),
   );
 
-  // Espera un frame para asegurar layout estable
   await new Promise(requestAnimationFrame);
 }
 

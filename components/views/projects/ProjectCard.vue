@@ -33,12 +33,12 @@ defineProps<{
     <h4 class="project-card__subtitle">{{ card.technologies.title }}</h4>
     <UiSlideInFromLeft class="project-card__technologies">
       <Icon
-        v-for="icono in card.technologies.icons"
-        :key="icono.id"
-        :name="resolveIcon(icono.name)"
+        v-for="icon in card.technologies.icons"
+        :key="icon.id"
+        :name="resolveIcon(icon.name)"
         class="project-card__icons"
-        :title="icono.title"
-        :aria-label="icono.title"
+        :title="icon.title"
+        :aria-label="icon.title"
         role="img"
       />
     </UiSlideInFromLeft>

@@ -10,6 +10,12 @@ export interface Icon {
   title?: string;
 }
 
+export interface TextItem {
+  id: number
+  text: string
+}
+
+
 export interface SEO {
   metaTitle: string;
   metaDescription: string;

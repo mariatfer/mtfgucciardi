@@ -5,9 +5,9 @@ defineProps<{
 }>();
 
 const route = useRoute();
-
+const localePath = useLocalePath();
 const isActive = (path: string) => {
-  return route.path === path;
+  return route.path === localePath(path);
 };
 </script>
 

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { SkillsSection } from "~/interfaces/locales/about";
+import type { SkillsSection } from "@/interfaces/locales/about";
 defineProps<SkillsSection>();
 </script>
 
@@ -18,12 +18,19 @@ defineProps<SkillsSection>();
         :alt="$props.image.alt"
         class="skills__image"
       />
-      <article class="skills-grid">
-        <UiScrollReveal v-for="skill in $props.skills" :key="skill.id">
-          <section class="skills-grid__card">
-            <icon :name="resolveIcon(skill.icon)" class="skills-grid__icon" />
-            <h4 class="skills-grid__title">{{ skill.text }}</h4>
-          </section>
+      <article class="skills__grid">
+        <UiScrollReveal
+          v-for="group in $props.skills"
+          :key="group.id"
+          class="skills__category"
+        >
+          <h3 class="skills__category-title">{{ group.title }}</h3>
+          <UiScrollReveal v-for="item in group.items" :key="item.id">
+            <section class="skills__card">
+              <icon :name="resolveIcon(item.name)" class="skills__icon" />
+              <p class="skills__card-title">{{ item.title }}</p>
+            </section>
+          </UiScrollReveal>
         </UiScrollReveal>
       </article>
     </div>
@@ -35,56 +42,78 @@ defineProps<SkillsSection>();
   @include flex(row, center, space-around, $gap: 1rem);
   width: 100%;
 
-  @include responsive() {
+  @include responsive(90rem) {
     @include flex(column, center, space-between, $gap: 1rem);
   }
 
   &__container {
-    @include flex(column, center, space-between, $gap: 1rem);
-    max-width: 100%;
+    @include flex(column, center, space-between, $gap: 2rem);
   }
+
   &__image {
     width: 100%;
     max-width: 19.4375rem;
     height: auto;
-    filter: drop-shadow(0 .9375rem 0.5rem #00000062);
-  }
-}
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-  max-width: 100%;
-
-  @include responsive(52.5rem) {
-    grid-template-columns: repeat(2, 1fr);
+    filter: drop-shadow(0 0.9375rem 0.5rem #00000062);
   }
 
-  &__card {
-    @include flex(column, flex-start);
-    gap: 0.5rem;
-    padding: 1rem;
-    background-color: var(--c-ligth-aquamarine);
-    border-radius: 0.5rem;
-    box-shadow: 0 .4375rem 0.5rem #00000062;
-    width: 100%;
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+    max-width: 100%;
+    @include responsive(70rem) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include responsive(40rem) {
+      grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    }
   }
 
-  &__title {
-    font-family: var(--f-font-regular);
+  &__category {
+    display: grid;
+    gap: 1rem;
+    align-content: start;
+  }
+
+  &__category-title {
+    font-family: var(--f-font-title);
+    font-weight: bold;
     font-size: var(--s-font-h4);
-    font-weight: 500;
-    color: var(--c-primary);
-
+    text-align: center;
     @include responsive(25rem) {
       font-size: 1rem;
     }
   }
 
+  &__card {
+    @include flex();
+    gap: 0.5rem;
+    padding: 0.7rem;
+    background-color: var(--c-aquamarine);
+    border-radius: 1.25rem;
+    box-shadow: 0 0.3125rem 0.5rem #0000007c;
+    width: 100%;
+    transition: var(--t-transition-button);
+    user-select: none;
+
+    &:hover {
+      transform: translateY(-0.25rem);
+      box-shadow: 0 0.625rem 1rem #0000007c;
+      .skills__card-title,
+      .skills__icon {
+        color: var(--c-primary);
+      }
+    }
+  }
+  &__card-title {
+    transition: var(--t-transition-button);
+  }
   &__icon {
     width: 2rem;
     height: 2rem;
-    color: var(--c-secondary);
+    transition: var(--t-transition-button);
   }
 }
 </style>
