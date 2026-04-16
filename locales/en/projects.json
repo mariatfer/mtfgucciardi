@@ -1,6 +1,6 @@
 {
   "title": "Projects",
-  "paragraph": "Welcome to the projects section of my portfolio. Here you'll find a selection of my most recent work as a junior frontend developer, showcasing my skills in Vue.js, Nuxt.js, TypeScript, and Sass. Each project reflects my commitment to creating fast, scalable web interfaces with an appealing design. I hope it inspires you, and I look forward to collaborating soon!",
+  "paragraph": "Welcome to the projects section of my portfolio. Here you'll find a selection of my most recent work as a junior frontend developer, showcasing my skills in Vue.js, Nuxt.js, TypeScript, and Scss. Each project reflects my commitment to creating fast, scalable web interfaces with an appealing design. I hope it inspires you, and I look forward to collaborating soon!",
   "projectCards": [
     {
       "id": 1,
@@ -43,7 +43,7 @@
           },
           {
             "id": 4,
-            "name": "sass",
+            "name": "scss",
             "title": "SCSS"
           }
         ]
@@ -94,7 +94,7 @@
           },
           {
             "id": 4,
-            "name": "sass",
+            "name": "scss",
             "title": "SCSS"
           }
         ]
@@ -145,7 +145,7 @@
           },
           {
             "id": 4,
-            "name": "sass",
+            "name": "scss",
             "title": "SCSS"
           }
         ]
