@@ -1,0 +1,26 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`SkillsSection > renders the title correctly 1`] = `
+"<section data-v-a018ff02="" class="skills">
+  <header data-v-7eed4ee3="" data-v-a018ff02="" class="header" style="--text-align: center; --text-color: var(--c-primary); --text-transform: uppercase; --text-shadow: none; --text-weight: bold;" bolder="true">
+    <h2 data-v-7eed4ee3="" class="header__title">Skills</h2>
+  </header>
+  <div data-v-a018ff02="" class="skills__container"><img data-v-a018ff02="" src="/img/skills.svg" alt="Skills" class="skills__image">
+    <article data-v-a018ff02="" class="skills__grid">
+      <div data-v-a018ff02="" class="skills__category" style="transform: translate(0px, 20px) scale(0.4, 0.4); opacity: 0;">
+        <h3 data-v-a018ff02="" class="skills__category-title">Frontend</h3>
+        <div data-v-a018ff02="" style="transform: translate(0px, 20px) scale(0.4, 0.4); opacity: 0;">
+          <section data-v-a018ff02="" class="skills__card"><span data-v-a018ff02="" class="iconify i-mdi:language-javascript skills__icon" aria-hidden="true"></span>
+            <p data-v-a018ff02="" class="skills__card-title">JavaScript</p>
+          </section>
+        </div>
+        <div data-v-a018ff02="" style="transform: translate(0px, 20px) scale(0.4, 0.4); opacity: 0;">
+          <section data-v-a018ff02="" class="skills__card"><span data-v-a018ff02="" class="iconify i-mdi:language-typescript skills__icon" aria-hidden="true"></span>
+            <p data-v-a018ff02="" class="skills__card-title">TypeScript</p>
+          </section>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>"
+`;
