@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import type { TimelineSection } from "~/interfaces/locales/about";
+import type { TimelineSection } from "@/interfaces/locales/about";
 defineProps<TimelineSection>();
+const { isResponsiveResolution } = useWindowsResize();
+const TIMELINE_CLASS = ".timeline-item";
 </script>
 
 <template>
@@ -12,7 +14,15 @@ defineProps<TimelineSection>();
       :bolder="true"
       >{{ $props.title }}</UiTheTitle
     >
-    <UiTheTimeline :items="$props.items" />
+    <UiScrollReveal :stagger="true" :child-selector="TIMELINE_CLASS">
+      <UTimeline
+        :orientation="isResponsiveResolution ? 'vertical' : 'horizontal'"
+        :size="isResponsiveResolution ? 'lg' : 'xl'"
+        :items="$props.items"
+        :default-value="4"
+        :ui="{ item: 'timeline-item' }"
+      />
+    </UiScrollReveal>
   </section>
 </template>
 
@@ -22,7 +32,7 @@ defineProps<TimelineSection>();
   align-self: start;
   padding: var(--s-margin) 0;
   @include responsive {
-    @include flex(column, center, center, $gap: 1.5rem);
+    @include flex(column, $gap: 1.5rem);
     padding: var(--s-margin-mobile) 0;
   }
 }

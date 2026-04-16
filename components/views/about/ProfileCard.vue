@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ProfileCard } from "~/interfaces/locales/about";
+import type { ProfileCard } from "@/interfaces/locales/about";
 defineProps<ProfileCard>();
 
 const { isResponsiveResolution } = useWindowsResize();
