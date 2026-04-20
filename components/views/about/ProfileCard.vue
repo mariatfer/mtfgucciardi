@@ -2,13 +2,13 @@
 import type { ProfileCard } from "@/interfaces/locales/about";
 defineProps<ProfileCard>();
 
-const { isResponsiveResolution } = useWindowsResize();
+const { isMobileResolution } = useWindowsResize();
 
 const textAlign = computed(() =>
-  isResponsiveResolution.value ? "center" : "left"
+  isMobileResolution.value ? "center" : "left"
 );
 const width = computed(() =>
-  isResponsiveResolution.value ? "80%" : "fit-content"
+  isMobileResolution.value ? "80%" : "fit-content"
 );
 </script>
 

@@ -56,10 +56,10 @@ const isAnchor = computed(() => {
   width: var(--width);
   color: var(--c-white);
   background-color: var(--c-medium-yellow);
-  border-radius: 0.625rem;
-  border: 2px dashed var(--c-medium-yellow);
+  border-radius: var(--s-border-radius);
+  border: 0.125rem dashed var(--c-medium-yellow);
   padding: 0.8rem;
-  transition: var(--t-transition-button);
+  transition: var(--t-transition);
   letter-spacing: 0.125rem;
   text-transform: uppercase;
   will-change: transform;
@@ -75,7 +75,7 @@ const isAnchor = computed(() => {
 
   &:hover {
     transition: 0.4s;
-    border: 2px dashed var(--c-medium-yellow);
+    border: 0.125rem dashed var(--c-medium-yellow);
     background-color: var(--c-dark-yellow);
   }
   &:disabled {
