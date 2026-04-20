@@ -1,28 +1,37 @@
 <script setup lang="ts">
 import { gsap } from "gsap";
 import SplitText from "gsap/SplitText";
-const props = defineProps<{
-  textAlign?: string;
-  color?: string;
-  shadow?: boolean;
-  uppercase?: boolean;
-  weight?: string;
-  animate?: boolean;
-}>();
+const props = withDefaults(
+  defineProps<{
+    textAlign?: string;
+    color?: string;
+    shadow?: boolean;
+    uppercase?: boolean;
+    weight?: string;
+    animate?: boolean;
+  }>(),
+  {
+    textAlign: "center",
+    color: "var(--c-white)",
+    shadow: false,
+    uppercase: false,
+    weight: "bold",
+  },
+);
 
 const styles = computed(() => ({
-  "--text-align": props.textAlign || "center",
-  "--text-color": props.color || "var(--c-white)",
+  "--text-align": props.textAlign,
+  "--text-color": props.color,
   "--text-transform": props.uppercase ? "uppercase" : "none",
   "--text-shadow": props.shadow
-    ? "4px 3px 0.7rem rgba(0, 0, 0, 0.582)"
+    ? "0.25rem 0.1875rem 0.7rem rgba(0, 0, 0, 0.582)"
     : "none",
-  "--text-weight": props.weight || "bold",
+  "--text-weight": props.weight,
 }));
 
 gsap.registerPlugin(SplitText);
 
-const title = ref<HTMLElement | null>(null)
+const title = ref<HTMLElement | null>(null);
 
 const isMounted = ref(false);
 onMounted(() => (isMounted.value = true));

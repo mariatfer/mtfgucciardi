@@ -82,9 +82,6 @@ defineProps<SkillsSection>();
     font-weight: bold;
     font-size: var(--s-font-h4);
     text-align: center;
-    @include responsive(25rem) {
-      font-size: 1rem;
-    }
   }
 
   &__card {
@@ -95,7 +92,7 @@ defineProps<SkillsSection>();
     border-radius: 1.25rem;
     box-shadow: 0 0.3125rem 0.5rem #0000007c;
     width: 100%;
-    transition: var(--t-transition-button);
+    transition: var(--t-transition);
     user-select: none;
 
     &:hover {
@@ -108,12 +105,12 @@ defineProps<SkillsSection>();
     }
   }
   &__card-title {
-    transition: var(--t-transition-button);
+    transition: var(--t-transition);
   }
   &__icon {
     width: 2rem;
     height: 2rem;
-    transition: var(--t-transition-button);
+    transition: var(--t-transition);
   }
 }
 </style>

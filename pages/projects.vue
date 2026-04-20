@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import type { Projects } from "@/interfaces/locales/projects";
 const { data: projectsLocales } = useLocales<Projects>("projects");
-const { isResponsiveResolution } = useWindowsResize();
+const { isMobileResolution } = useWindowsResize();
 
 const textAlign = computed(() =>
-  isResponsiveResolution.value ? "center" : "left"
+  isMobileResolution.value ? "center" : "left"
 );
 watchEffect(() => {
   if (projectsLocales.value?.seo) {

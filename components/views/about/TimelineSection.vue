@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { TimelineSection } from "@/interfaces/locales/about";
 defineProps<TimelineSection>();
-const { isResponsiveResolution } = useWindowsResize();
+const { isTabletResolution, isMobileResolution } = useWindowsResize();
 const TIMELINE_CLASS = ".timeline-item";
 </script>
 
@@ -16,8 +16,8 @@ const TIMELINE_CLASS = ".timeline-item";
     >
     <UiScrollReveal :stagger="true" :child-selector="TIMELINE_CLASS">
       <UTimeline
-        :orientation="isResponsiveResolution ? 'vertical' : 'horizontal'"
-        :size="isResponsiveResolution ? 'lg' : 'xl'"
+        :orientation="isTabletResolution || isMobileResolution ? 'vertical' : 'horizontal'"
+        :size="isMobileResolution ? 'lg' : 'xl'"
         :items="$props.items"
         :default-value="4"
         :ui="{ item: 'timeline-item' }"
