@@ -14,6 +14,7 @@ export interface Paragraph {
 
 export interface ThankYou {
   title: string;
+  intro: string;
   subtitle: string;
   paragraphs: Paragraph[];
   seo: SEO;
