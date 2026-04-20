@@ -2,10 +2,10 @@
 import type { ThankYou } from "@/interfaces/locales/thank-you";
 
 const { data: thanksLocales } = useLocales<ThankYou>("thank-you");
-const { isResponsiveResolution } = useWindowsResize();
+const { isMobileResolution } = useWindowsResize();
 
 const textAlign = computed(() =>
-  isResponsiveResolution.value ? "center" : "left"
+  isMobileResolution.value ? "center" : "left",
 );
 watchEffect(() => {
   if (thanksLocales.value?.seo) {
@@ -29,22 +29,27 @@ watchEffect(() => {
       :bolder="true"
       >{{ thanksLocales.title }}</UiTheTitle
     >
-    <section v-if="thanksLocales" class="thank-you__message">
-      <h3>{{ thanksLocales.subtitle }}</h3>
-      <div class="line" />
-      <p v-for="paragraph in thanksLocales.paragraphs" :key="paragraph.id">
-        <template v-for="part in paragraph.parts" :key="part">
-          <span v-if="typeof part === 'string'">{{ part }}</span>
-          <NuxtLink
-            v-else-if="part.type === 'email'"
-            :href="'mailto:' + part.value"
-            class="thank-you__email"
-          >
-            {{ part.value }}
-          </NuxtLink>
-        </template>
-      </p>
-    </section>
+    <p class="thank-you__intro">
+      {{ thanksLocales?.intro }}
+    </p>
+    <UiScrollReveal>
+      <section v-if="thanksLocales" class="thank-you__message">
+        <h3>{{ thanksLocales.subtitle }}</h3>
+        <div class="line" />
+        <p v-for="paragraph in thanksLocales.paragraphs" :key="paragraph.id">
+          <template v-for="part in paragraph.parts" :key="part">
+            <span v-if="typeof part === 'string'">{{ part }}</span>
+            <NuxtLink
+              v-else-if="part.type === 'email'"
+              :href="'mailto:' + part.value"
+              class="thank-you__email"
+            >
+              {{ part.value }}
+            </NuxtLink>
+          </template>
+        </p>
+      </section>
+    </UiScrollReveal>
   </div>
 </template>
 
@@ -56,6 +61,11 @@ watchEffect(() => {
     margin: var(--s-margin-mobile) 0;
     padding: 0 var(--s-padding-mobile);
   }
+
+  &__intro {
+    margin: 1.5rem 0 3rem 0;
+  }
+
   &__message {
     @include flex(column, $gap: 1.5rem);
     @include background;
@@ -64,7 +74,7 @@ watchEffect(() => {
     max-width: 62.5rem;
     box-shadow: 0 0 3rem #0000003a;
     text-align: center;
-
+    border-radius: var(--s-border-radius);
     @include responsive {
       margin: 1rem 0 0 0;
       padding: 4rem var(--s-padding-mobile);
