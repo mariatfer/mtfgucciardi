@@ -1,1 +1,2 @@
-export const MOBILE_RESOLUTION = 1024
+export const MOBILE_RESOLUTION = 1024;
+export const TABLET_RESOLUTION = 1440;
