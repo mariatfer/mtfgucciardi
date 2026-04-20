@@ -1,18 +1,22 @@
-import { MOBILE_RESOLUTION } from '@/constants/resolutions'
+import { MOBILE_RESOLUTION, TABLET_RESOLUTION } from "@/constants/resolutions";
 
 export function useWindowsResize() {
-  const isResponsiveResolution = ref(false)
+  const isMobileResolution = ref(false);
+  const isTabletResolution = ref(false);
 
   const updateWindowsResize = () => {
-    isResponsiveResolution.value = window.innerWidth < MOBILE_RESOLUTION
-  }
+    isMobileResolution.value = window.innerWidth < MOBILE_RESOLUTION;
+    isTabletResolution.value =
+      window.innerWidth >= MOBILE_RESOLUTION &&
+      window.innerWidth < TABLET_RESOLUTION;
+  };
   onMounted(() => {
-    updateWindowsResize()
-    window.addEventListener('resize', updateWindowsResize)
-  })
+    updateWindowsResize();
+    window.addEventListener("resize", updateWindowsResize);
+  });
   onUnmounted(() => {
-    window.removeEventListener('resize', updateWindowsResize)
-  })
+    window.removeEventListener("resize", updateWindowsResize);
+  });
 
-  return { isResponsiveResolution }
+  return { isMobileResolution, isTabletResolution };
 }
