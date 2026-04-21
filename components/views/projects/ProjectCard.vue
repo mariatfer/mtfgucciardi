@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ProjectCard } from "~/interfaces/locales/projects";
+import type { ProjectCard } from "@/interfaces/locales/projects";
 
 defineProps<{
   card: ProjectCard;
@@ -31,7 +31,7 @@ defineProps<{
       {{ paragraph.text }}
     </p>
     <h4 class="project-card__subtitle">{{ card.technologies.title }}</h4>
-    <UiSlideInFromLeft class="project-card__technologies">
+    <UiAnimationsSlideInFromLeft class="project-card__technologies">
       <Icon
         v-for="icon in card.technologies.icons"
         :key="icon.id"
@@ -41,7 +41,7 @@ defineProps<{
         :aria-label="icon.title"
         role="img"
       />
-    </UiSlideInFromLeft>
+    </UiAnimationsSlideInFromLeft>
 
     <UiButtonMainButton :link="card.button.link">
       {{ card.button.text }}

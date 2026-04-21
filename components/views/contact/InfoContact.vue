@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { InfoContact } from "~/interfaces/locales/contacts";
+import type { InfoContact } from "@/interfaces/locales/contacts";
 defineProps<InfoContact>();
 const { isMobileResolution } = useWindowsResize();
 const textAlign = computed(() =>

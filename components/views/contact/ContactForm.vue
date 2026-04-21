@@ -75,7 +75,7 @@ const sendMessage = async () => {
       class="contact-form__grid-item"
       >{{ $props.title }}</UiTheTitle
     >
-    <UiScrollReveal
+    <UiAnimationsScrollReveal
       v-for="field in $props.fields"
       :key="field.id"
       :class="['contact-form__grid-item', field.twoColumns || '']"
@@ -90,10 +90,10 @@ const sendMessage = async () => {
         :error="errors[field.vModel]"
         @blur="validateFieldOnBlur(field.vModel, formData[field.vModel])"
       />
-    </UiScrollReveal>
-    <UiScrollReveal class="contact-form__grid-item--button">
+    </UiAnimationsScrollReveal>
+    <UiAnimationsScrollReveal class="contact-form__grid-item--button">
       <UiButtonMainButton width="100%">{{ $props.button }}</UiButtonMainButton>
-    </UiScrollReveal>
+    </UiAnimationsScrollReveal>
   </form>
 </template>
 
@@ -110,7 +110,8 @@ const sendMessage = async () => {
   align-self: center;
   width: 55%;
   @include responsive() {
-    padding: 6rem var(--s-padding-mobile) 9rem var(--s-padding-mobile);
+    padding: 4rem var(--s-padding-mobile) var(--s-padding)
+      var(--s-padding-mobile);
     width: 100%;
     margin: 0;
     align-self: initial;

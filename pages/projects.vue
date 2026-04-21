@@ -4,7 +4,7 @@ const { data: projectsLocales } = useLocales<Projects>("projects");
 const { isMobileResolution } = useWindowsResize();
 
 const textAlign = computed(() =>
-  isMobileResolution.value ? "center" : "left"
+  isMobileResolution.value ? "center" : "left",
 );
 watchEffect(() => {
   if (projectsLocales.value?.seo) {
@@ -33,13 +33,13 @@ watchEffect(() => {
       {{ projectsLocales.paragraph }}
     </p>
     <div v-if="projectsLocales?.projectCards" class="projects__cards-section">
-      <UiScrollReveal
+      <UiAnimationsScrollReveal
         v-for="card in projectsLocales.projectCards"
         :key="card.id"
         style="width: 100%"
       >
         <ViewsProjectsProjectCard :card="card" />
-      </UiScrollReveal>
+      </UiAnimationsScrollReveal>
     </div>
   </div>
 </template>
@@ -48,7 +48,7 @@ watchEffect(() => {
 .projects {
   padding: 0 0 var(--s-padding) 0;
   @include responsive {
-    padding: 0 0 var(--s-padding-mobile) 0;
+    padding: 0 0 var(--s-padding) 0;
   }
   &__title {
     margin: var(--s-margin) 0 0 0;

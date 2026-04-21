@@ -34,7 +34,7 @@ onMounted(() => {
       stagger: props.stagger ? 0.15 : 0,
       scrollTrigger: {
         trigger: el.value,
-        start: "top 85%",
+        start: "top 90%",
         toggleActions: "play none none none",
       },
     },

@@ -14,15 +14,17 @@ const TIMELINE_CLASS = ".timeline-item";
       :bolder="true"
       >{{ $props.title }}</UiTheTitle
     >
-    <UiScrollReveal :stagger="true" :child-selector="TIMELINE_CLASS">
+    <UiAnimationsScrollReveal :stagger="true" :child-selector="TIMELINE_CLASS">
       <UTimeline
-        :orientation="isTabletResolution || isMobileResolution ? 'vertical' : 'horizontal'"
+        :orientation="
+          isTabletResolution || isMobileResolution ? 'vertical' : 'horizontal'
+        "
         :size="isMobileResolution ? 'lg' : 'xl'"
         :items="$props.items"
         :default-value="4"
         :ui="{ item: 'timeline-item' }"
       />
-    </UiScrollReveal>
+    </UiAnimationsScrollReveal>
   </section>
 </template>
 
@@ -30,10 +32,8 @@ const TIMELINE_CLASS = ".timeline-item";
 .timeline-section {
   @include flex(column, flex-start, space-between, $gap: 3rem);
   align-self: start;
-  padding: var(--s-margin) 0;
   @include responsive {
     @include flex(column, $gap: 1.5rem);
-    padding: var(--s-margin-mobile) 0;
   }
 }
 </style>

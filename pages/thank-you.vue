@@ -32,7 +32,7 @@ watchEffect(() => {
     <p class="thank-you__intro">
       {{ thanksLocales?.intro }}
     </p>
-    <UiScrollReveal>
+    <UiAnimationsScrollReveal>
       <section v-if="thanksLocales" class="thank-you__message">
         <h3>{{ thanksLocales.subtitle }}</h3>
         <div class="line" />
@@ -49,17 +49,17 @@ watchEffect(() => {
           </template>
         </p>
       </section>
-    </UiScrollReveal>
+    </UiAnimationsScrollReveal>
   </div>
 </template>
 
 <style lang="scss" scoped>
 .thank-you {
-  margin: var(--s-margin) 0;
+  margin: var(--s-margin) 0 0 0;
   padding: 0 var(--s-padding);
   @include responsive {
-    margin: var(--s-margin-mobile) 0;
-    padding: 0 var(--s-padding-mobile);
+    margin: var(--s-margin-mobile) 0 0 0;
+    padding: 0 var(--s-padding-mobile) var(--s-padding) var(--s-padding-mobile);
   }
 
   &__intro {

@@ -46,11 +46,9 @@ watchEffect(() => {
     }
   }
   &__timeline {
-    margin: 0 0 var(--s-margin-mobile) 0;
-    padding: 0 var(--s-padding);
+    padding: var(--s-padding);
     @include responsive {
-      margin: 0 0 var(--s-margin-mobile) 0;
-      padding: 0 var(--s-padding-mobile);
+      padding: 4rem var(--s-padding-mobile) var(--s-padding) var(--s-padding-mobile);
     }
   }
   &__skills {

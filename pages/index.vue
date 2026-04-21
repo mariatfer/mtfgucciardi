@@ -48,7 +48,7 @@ watchEffect(() => {
   }
 
   &__presentation {
-    margin: var(--s-margin) 0;
+    margin: var(--s-margin-mobile) 0;
     padding: 0 var(--s-padding);
     max-width: 50%;
 
