@@ -19,19 +19,19 @@ defineProps<SkillsSection>();
         class="skills__image"
       />
       <article class="skills__grid">
-        <UiScrollReveal
+        <UiAnimationsScrollReveal
           v-for="group in $props.skills"
           :key="group.id"
           class="skills__category"
         >
           <h3 class="skills__category-title">{{ group.title }}</h3>
-          <UiScrollReveal v-for="item in group.items" :key="item.id">
+          <UiAnimationsScrollReveal v-for="item in group.items" :key="item.id">
             <section class="skills__card">
               <icon :name="resolveIcon(item.name)" class="skills__icon" />
               <p class="skills__card-title">{{ item.title }}</p>
             </section>
-          </UiScrollReveal>
-        </UiScrollReveal>
+          </UiAnimationsScrollReveal>
+        </UiAnimationsScrollReveal>
       </article>
     </div>
   </section>
