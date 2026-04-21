@@ -1,10 +1,10 @@
 <template>
   <NuxtLayout>
-    <UiPageTransition>
+    <UiAnimationsPageTransition>
       <UApp>
         <NuxtPage :key="$route.fullPath" />
       </UApp>
-    </UiPageTransition>
+    </UiAnimationsPageTransition>
   </NuxtLayout>
-  <UiCursorParticles />
+  <UiAnimationsCursorParticles />
 </template>
