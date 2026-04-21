@@ -8,21 +8,22 @@ useHead({
     lang: language,
   },
 });
+const route = useRoute();
+const isHome = computed(() => String(route.name || "").startsWith("index"));
 </script>
 
 <template>
-  <div
-    class="layout"
-    :class="$route.name === 'index' ? 'bg-index' : 'bg-default'"
-  >
+  <div class="layout" :class="isHome ? 'bg-index' : 'bg-default'">
     <UiNavbarMainNavbar />
     <slot />
+    <UiFooterCopyright />
     <div ref="overlay" class="fade-overlay" />
   </div>
 </template>
 
 <style lang="scss" scoped>
 .layout {
+  position: relative;
   padding: 5rem 0 0 0;
 }
 .bg-index {
