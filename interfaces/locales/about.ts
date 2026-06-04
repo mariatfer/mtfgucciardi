@@ -1,26 +1,22 @@
-import type { Icon, Image, SEO, TextItem } from "@/interfaces/common";
+import type { Button, Icon, Image, SEO, TextItem } from "@/interfaces/common";
 import type { TimelineItem } from "@nuxt/ui";
 
 export interface ProfileCard {
   title: string;
   description: TextItem[];
-  button: {
-    text: string;
-    icon: string;
-    file: string;
-  };
+  button: Button;
 }
 
 export interface SkillCategory {
-  id: number
-  title: string
-  items: Icon[]
+  id: number;
+  title: string;
+  items: Icon[];
 }
 
 export interface SkillsSection {
-  title: string
-  image: Image
-  skills: SkillCategory[]
+  title: string;
+  image: Image;
+  skills: SkillCategory[];
 }
 export interface TimelineSection {
   title: string;

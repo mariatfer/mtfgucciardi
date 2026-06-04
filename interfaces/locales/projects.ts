@@ -1,14 +1,11 @@
-import type { Image, Icon, SEO, TextItem } from "@/interfaces/common";
+import type { Image, Icon, SEO, TextItem, Button } from "@/interfaces/common";
 
 export interface ProjectCard {
   id: number;
   title: string;
   image: Image;
   description: TextItem[];
-  button: {
-    text: string;
-    link: string;
-  };
+  buttons: Button[];
   technologies: {
     title: string;
     icons: Icon[];
