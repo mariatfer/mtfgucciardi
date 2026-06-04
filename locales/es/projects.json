@@ -4,6 +4,131 @@
   "projectCards": [
     {
       "id": 1,
+      "title": "AFR Diseño & Impresión",
+      "image": {
+        "url": "/img/afrimpresores.webp",
+        "alt": "Mockup del proyecto AFR Diseño & Impresión"
+      },
+      "description": [
+        {
+          "id": 1,
+          "text": "AFR Diseño & Impresión es un sitio web corporativo completo cuyo objetivo principal es mostrar el catálogo de productos y permitir a los usuarios solicitar presupuestos personalizados para cada uno."
+        },
+        {
+          "id": 2,
+          "text": "Incluye páginas de contacto, sobre nosotros, legales y de ayuda. No dispone de carrito de compra ni registro de usuarios, ya que el flujo se basa en solicitudes de presupuesto directas."
+        },
+        {
+          "id": 3,
+          "text": "El frontend está desarrollado con Nuxt 4, TypeScript y SCSS, desplegado en Vercel. El backend está construido con Strapi y alojado en un servidor VPS con despliegues automatizados mediante GitHub Actions."
+        }
+      ],
+      "technologies": {
+        "title": "Tecnologías utilizadas",
+        "icons": [
+          {
+            "id": 1,
+            "name": "nuxt",
+            "title": "Nuxt 4"
+          },
+          {
+            "id": 2,
+            "name": "vue",
+            "title": "Vue 3"
+          },
+          {
+            "id": 3,
+            "name": "typescript",
+            "title": "TypeScript"
+          },
+          {
+            "id": 4,
+            "name": "scss",
+            "title": "SCSS"
+          },
+          {
+            "id": 5,
+            "name": "strapi",
+            "title": "Strapi"
+          }
+        ]
+      },
+      "buttons": [
+        {
+          "id": 1,
+          "text": "Ver proyecto",
+          "link": "https://afrimpresores.es/"
+        },
+        {
+          "id": 2,
+          "text": "Ver docs",
+          "link": "https://afr-documentation.vercel.app/",
+          "secondary": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "VibeLive",
+      "image": {
+        "url": "/img/vibelive.webp",
+        "alt": "Mockup de un clon de Twitch"
+      },
+      "description": [
+        {
+          "id": 1,
+          "text": "Vibe Live es una plataforma de streaming en tiempo real inspirada en Twitch, creada con Nuxt.js, Vue.js y TypeScript. Utiliza la API oficial de Twitch para autenticar usuarios y mostrar datos de canales y transmisiones."
+        },
+        {
+          "id": 2,
+          "text": "Los usuarios pueden disfrutar de una experiencia completa de streaming con visualización de transmisiones en vivo y chat en tiempo real."
+        },
+        {
+          "id": 3,
+          "text": "El proyecto está desplegado en Vercel y está optimizado tanto para dispositivos de escritorio como móviles."
+        }
+      ],
+      "technologies": {
+        "title": "Tecnologías utilizadas",
+        "icons": [
+          {
+            "id": 1,
+            "name": "nuxt",
+            "title": "Nuxt 3"
+          },
+          {
+            "id": 2,
+            "name": "vue",
+            "title": "Vue 3"
+          },
+          {
+            "id": 3,
+            "name": "typescript",
+            "title": "TypeScript"
+          },
+          {
+            "id": 4,
+            "name": "scss",
+            "title": "SCSS"
+          }
+        ]
+      },
+      "buttons": [
+        {
+          "id": 1,
+          "text": "Ver proyecto",
+          "link": "https://vibe-live.vercel.app"
+        },
+        {
+          "id": 2,
+          "text": "Ver código",
+          "link": "https://github.com/mariatfer/VibeLive",
+          "secondary": true
+        }
+      ]
+    },
+    {
+      "id": 3,
       "title": "Con lo que hay",
       "image": {
         "url": "/img/conloquehay.png",
@@ -29,12 +154,12 @@
           {
             "id": 1,
             "name": "nuxt",
-            "title": "Nuxt"
+            "title": "Nuxt 4"
           },
           {
             "id": 2,
             "name": "vue",
-            "title": "Vue"
+            "title": "Vue 3"
           },
           {
             "id": 3,
@@ -48,64 +173,23 @@
           }
         ]
       },
-      "button": {
-        "text": "Ver proyecto",
-        "link": "https://con-lo-que-hay.vercel.app/"
-      }
-    },
-    {
-      "id": 2,
-      "title": "Vibe-Live",
-      "image": {
-        "url": "/img/vibelive.png",
-        "alt": "Mockup de un clon de Twitch"
-      },
-      "description": [
+      "buttons": [
         {
           "id": 1,
-          "text": "Vibe Live es una plataforma de streaming en tiempo real inspirada en Twitch, creada con Nuxt.js, Vue.js y TypeScript. Utiliza la API oficial de Twitch para autenticar usuarios y mostrar datos de canales y transmisiones."
+          "text": "Ver proyecto",
+          "link": "https://con-lo-que-hay.vercel.app"
         },
         {
           "id": 2,
-          "text": "Los usuarios pueden disfrutar de una experiencia completa de streaming con visualización de transmisiones en vivo y chat en tiempo real."
-        },
-        {
-          "id": 3,
-          "text": "El proyecto está desplegado en Vercel y está optimizado tanto para dispositivos de escritorio como móviles."
+          "text": "Ver código",
+          "link": "https://github.com/mariatfer/con-lo-que-hay",
+          "secondary": true
         }
-      ],
-      "technologies": {
-        "title": "Tecnologías utilizadas",
-        "icons": [
-          {
-            "id": 1,
-            "name": "nuxt",
-            "title": "Nuxt"
-          },
-          {
-            "id": 2,
-            "name": "vue",
-            "title": "Vue"
-          },
-          {
-            "id": 3,
-            "name": "typescript",
-            "title": "TypeScript"
-          },
-          {
-            "id": 4,
-            "name": "scss",
-            "title": "SCSS"
-          }
-        ]
-      },
-      "button": {
-        "text": "Ver proyecto",
-        "link": "https://vibe-live.vercel.app/"
-      }
+      ]
     },
+
     {
-      "id": 3,
+      "id": 4,
       "title": "HandDraw",
       "image": {
         "url": "/img/handdraw.png",
@@ -131,12 +215,12 @@
           {
             "id": 1,
             "name": "nuxt",
-            "title": "Nuxt"
+            "title": "Nuxt 4"
           },
           {
             "id": 2,
             "name": "vue",
-            "title": "Vue"
+            "title": "Vue 3"
           },
           {
             "id": 3,
@@ -150,10 +234,19 @@
           }
         ]
       },
-      "button": {
-        "text": "Ver proyecto",
-        "link": "https://handdraw.vercel.app/"
-      }
+      "buttons": [
+        {
+          "id": 1,
+          "text": "Ver proyecto",
+          "link": "https://handdraw.vercel.app/"
+        },
+        {
+          "id": 2,
+          "text": "Ver código",
+          "link": "https://github.com/mariatfer/handdraw",
+          "secondary": true
+        }
+      ]
     }
   ],
   "seo": {
