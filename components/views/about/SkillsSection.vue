@@ -13,7 +13,7 @@ defineProps<SkillsSection>();
       >{{ $props.title }}</UiTheTitle
     >
     <div class="skills__container">
-      <img
+      <NuxtImg
         :src="$props.image.url"
         :alt="$props.image.alt"
         class="skills__image"

@@ -24,7 +24,7 @@ watchEffect(() => {
     </section>
     <section class="home__character">
       <USkeleton v-if="!loaded" class="home__skeleton" />
-      <img
+      <NuxtImg
         v-show="loaded"
         :src="homeLocales.image.url"
         :alt="homeLocales.image.alt"

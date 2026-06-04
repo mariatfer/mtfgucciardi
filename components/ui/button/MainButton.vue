@@ -1,17 +1,8 @@
 <script setup lang="ts">
 import { RouterLink } from "#vue-router";
+import type { MainButton } from "@/interfaces/common";
 
-interface Props {
-  link?: string;
-  padding?: string;
-  to?: string;
-  width?: number | string;
-  target?: string;
-  rel?: string;
-  download?: string | boolean;
-}
-
-const props = defineProps<Props>();
+const props = defineProps<MainButton>();
 
 const styles = computed(() => ({
   "--width": props.width || "auto",
@@ -39,6 +30,7 @@ const isAnchor = computed(() => {
   <component
     :is="component"
     class="main-button"
+    :class="{ secondary: props.secondary }"
     :style="styles"
     :active="false"
     :to="to"
@@ -57,7 +49,7 @@ const isAnchor = computed(() => {
   color: var(--c-white);
   background-color: var(--c-medium-yellow);
   border-radius: var(--s-border-radius);
-  border: 0.125rem dashed var(--c-medium-yellow);
+  border: 0.125rem solid var(--c-medium-yellow);
   padding: 0.8rem;
   transition: var(--t-transition);
   letter-spacing: 0.125rem;
@@ -75,7 +67,7 @@ const isAnchor = computed(() => {
 
   &:hover {
     transition: 0.4s;
-    border: 0.125rem dashed var(--c-medium-yellow);
+    border: 0.125rem solid var(--c-medium-yellow);
     background-color: var(--c-dark-yellow);
   }
   &:disabled {
@@ -94,6 +86,19 @@ const isAnchor = computed(() => {
   }
   @include responsive() {
     font-size: var(--s-font-cta);
+  }
+
+  &.secondary {
+    background: transparent;
+    color: var(--c-white);
+    border: 0.125rem solid var(--c-white);
+    transition: 0.3s ease;
+
+    &:hover {
+      box-shadow:
+        0 0 5px var(--c-white),
+        0 0 10px var(--c-white);
+    }
   }
 }
 </style>

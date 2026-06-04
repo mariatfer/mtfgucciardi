@@ -28,20 +28,20 @@
         "id": 1,
         "title": "Frontend Core",
         "items": [
-          { "id": 1, "title": "JavaScript", "name": "javascript" },
+          { "id": 1, "title": "JavaScript (ES6+)", "name": "javascript" },
           { "id": 2, "title": "TypeScript", "name": "typescript" },
-          { "id": 6, "title": "HTML5", "name": "html" },
-          { "id": 7, "title": "CSS3", "name": "css" },
-          { "id": 8, "title": "SCSS", "name": "scss" }
+          { "id": 3, "title": "HTML5", "name": "html" },
+          { "id": 4, "title": "CSS3", "name": "css" },
+          { "id": 5, "title": "SCSS", "name": "scss" }
         ]
       },
       {
         "id": 2,
         "title": "Frameworks",
         "items": [
-          { "id": 3, "title": "Vue.js", "name": "vue" },
-          { "id": 4, "title": "Nuxt.js", "name": "nuxt" },
-          { "id": 5, "title": "Bootstrap", "name": "bootstrap" }
+          { "id": 6, "title": "Vue 3", "name": "vue" },
+          { "id": 7, "title": "Nuxt 3/4", "name": "nuxt" },
+          { "id": 8, "title": "Bootstrap", "name": "bootstrap" }
         ]
       },
       {
@@ -50,15 +50,20 @@
         "items": [
           { "id": 9, "title": "Strapi", "name": "strapi" },
           { "id": 10, "title": "PHP", "name": "php" },
-          { "id": 11, "title": "Java", "name": "java" }
+          { "id": 11, "title": "Java", "name": "java" },
+          { "id": 12, "title": "Node.js", "name": "node" }
         ]
       },
       {
         "id": 4,
         "title": "Tools",
         "items": [
-          { "id": 12, "title": "Git", "name": "git" },
-          { "id": 13, "title": "GitHub", "name": "github" }
+          { "id": 13, "title": "Git", "name": "git" },
+          { "id": 14, "title": "GitHub", "name": "github" },
+          { "id": 15, "title": "ESLint", "name": "eslint" },
+          { "id": 16, "title": "Prettier", "name": "prettier" },
+          { "id": 17, "title": "Vercel", "name": "vercel" },
+          { "id": 18, "title": "GitHub Actions", "name": "github-actions" }
         ]
       }
     ]
@@ -86,8 +91,8 @@
       },
       {
         "date": "Today",
-        "title": "Personal Projects",
-        "description": "I continue to grow through personal projects, exploring new technologies and expanding my portfolio. I’m motivated by continuous learning and by improving every day as a frontend developer.",
+        "title": "Work & Projects",
+        "description": "I continue growing through client projects and personal work, exploring new technologies and expanding my portfolio. I’m driven by continuous learning and by improving a little more every day as a frontend developer.",
         "icon": "material-symbols:code"
       }
     ]

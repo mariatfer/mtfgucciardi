@@ -11,10 +11,20 @@ export interface Icon {
 }
 
 export interface TextItem {
-  id: number
-  text: string
+  id: number;
+  text: string;
 }
 
+export interface MainButton {
+  link?: string;
+  padding?: string;
+  to?: string;
+  width?: number | string;
+  target?: string;
+  rel?: string;
+  download?: string | boolean;
+  secondary?: boolean;
+}
 
 export interface SEO {
   metaTitle: string;
@@ -38,4 +48,13 @@ export interface Particle {
   speedX: number;
   speedY: number;
   life: number;
+}
+
+export interface Button {
+  id?: number;
+  text: string;
+  icon?: string;
+  file?: string;
+  link?: string;
+  secondary?: boolean;
 }

@@ -1,17 +1,25 @@
 <script setup lang="ts">
 import type { ProjectCard } from "@/interfaces/locales/projects";
 
-defineProps<{
+const props = defineProps<{
   card: ProjectCard;
 }>();
+const mainButton = computed(() =>
+  props.card.buttons?.find((button) => button.link),
+);
 </script>
 
 <template>
-  <article class="project-card">
-    <NuxtLink :to="card.button.link" target="_blank" class="container">
+  <article v-if="card" class="project-card">
+    <NuxtLink
+      v-if="mainButton"
+      :to="mainButton.link"
+      target="_blank"
+      class="container"
+    >
       <div class="tablet">
         <div class="tablet__screen">
-          <img
+          <NuxtImg
             :src="card.image.url"
             width="1600"
             height="1000"
@@ -42,10 +50,16 @@ defineProps<{
         role="img"
       />
     </UiAnimationsSlideInFromLeft>
-
-    <UiButtonMainButton :link="card.button.link">
-      {{ card.button.text }}
-    </UiButtonMainButton>
+    <div class="project-card__buttons">
+      <UiButtonMainButton
+        v-for="button in card.buttons"
+        :key="button.id"
+        :link="button.link"
+        :secondary="button.secondary"
+      >
+        {{ button.text }}
+      </UiButtonMainButton>
+    </div>
   </article>
 </template>
 
@@ -89,6 +103,14 @@ defineProps<{
     width: 2rem;
     height: 2rem;
     color: var(--c-primary);
+  }
+
+  &__buttons {
+    @include flex(row, flex-start, flex-start, $gap: 1.5rem);
+    width: 100%;
+    @include responsive(25.75rem) {
+      @include flex(column, flex-start, flex-start, $gap: 1.5rem);
+    }
   }
 }
 
